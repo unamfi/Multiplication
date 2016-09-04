@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : INTERACCION_ACC.vf
+// /___/   /\     Timestamp : 10/20/2012 01:59:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.sch" INTERACCION_ACC.vf
+//Design Name: INTERACCION_ACC
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module INTERACCION_ACC(CLK, 
+                       E0B, 
+                       E1B, 
+                       WB, 
+                       NB, 
+                       ZB, 
+                       A, 
+                       B, 
+                       CB);
+
+    input CLK;
+    input E0B;
+    input E1B;
+    input WB;
+   output NB;
+   output ZB;
+    inout [7:0] A;
+    inout [7:0] B;
+    inout [7:0] CB;
+   
+   
+   ACC XLXI_1 (.clk(CLK), 
+               .E0(E0B), 
+               .E1(E1B), 
+               .NW(WB), 
+               .N(NB), 
+               .Z(ZB), 
+               .A(A[7:0]), 
+               .B(B[7:0]), 
+               .C(CB[7:0]));
+endmodule

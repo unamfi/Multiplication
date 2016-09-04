@@ -1,0 +1,153 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : UCC_TRANS.vf
+// /___/   /\     Timestamp : 10/26/2012 19:18:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UCC_TRANS.sch" UCC_TRANS.vf
+//Design Name: UCC_TRANS
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module UCC_TRANS(Cin, 
+                 Ci_Acc, 
+                 DATO_A, 
+                 DATO_B, 
+                 D_upa, 
+                 reloj, 
+                 reset, 
+                 Ao_A, 
+                 Ao_B, 
+                 Bo_A, 
+                 Bo_B, 
+                 Cout, 
+                 Co_A, 
+                 Co_B, 
+                 NA, 
+                 NB, 
+                 ZA, 
+                 ZB);
+
+    input Cin;
+    input [7:0] Ci_Acc;
+    input [7:0] DATO_A;
+    input [7:0] DATO_B;
+    input [7:0] D_upa;
+    input reloj;
+    input reset;
+   output [7:0] Ao_A;
+   output [7:0] Ao_B;
+   output [7:0] Bo_A;
+   output [7:0] Bo_B;
+   output Cout;
+   output [7:0] Co_A;
+   output [7:0] Co_B;
+   output NA;
+   output NB;
+   output ZA;
+   output ZB;
+   
+   wire DUPA;
+   wire EA0;
+   wire EA1;
+   wire EB0;
+   wire EB1;
+   wire Fc;
+   wire OEUPA;
+   wire Qo;
+   wire [9:7] UPAH;
+   wire [3:0] UPAL;
+   wire [6:4] UPAM;
+   wire WA;
+   wire WB;
+   wire [7:0] XLXN_18;
+   wire [7:0] XLXN_27;
+   wire XLXN_70;
+   wire [7:0] Yupa;
+   wire Y0o;
+   
+   MULTIPLICACION XLXI_1 (.clk(reloj), 
+                          .DATO_A(DATO_A[7:0]), 
+                          .DATO_B(DATO_B[7:0]), 
+                          .Fc(Fc), 
+                          .Qo(Qo), 
+                          .reset(reset), 
+                          .BUS_A(XLXN_18[7:0]), 
+                          .BUS_B(XLXN_27[7:0]), 
+                          .DUPA(DUPA), 
+                          .EA0(EA0), 
+                          .EA1(EA1), 
+                          .EB0(EB0), 
+                          .EB1(EB1), 
+                          .OEUPA(OEUPA), 
+                          .UPAH(UPAH[9:7]), 
+                          .UPAL(UPAL[3:0]), 
+                          .UPAM(UPAM[6:4]), 
+                          .WA(WA), 
+                          .WB(WB));
+   ACC XLXI_2 (.Ai(XLXN_18[7:0]), 
+               .Bi(XLXN_27[7:0]), 
+               .Ci(Ci_Acc[7:0]), 
+               .clk(reloj), 
+               .E0(EA0), 
+               .E1(EA1), 
+               .NW(WA), 
+               .Ao(Ao_A[7:0]), 
+               .Bo(Bo_A[7:0]), 
+               .Co(Co_A[7:0]), 
+               .N(NA), 
+               .Z(ZA));
+   ACC XLXI_3 (.Ai(XLXN_18[7:0]), 
+               .Bi(XLXN_27[7:0]), 
+               .Ci(Ci_Acc[7:0]), 
+               .clk(reloj), 
+               .E0(EB0), 
+               .E1(EB1), 
+               .NW(WB), 
+               .Ao(Ao_B[7:0]), 
+               .Bo(Bo_B[7:0]), 
+               .Co(Co_B[7:0]), 
+               .N(NB), 
+               .Z(ZB));
+   UPA XLXI_4 (.A(Co_A[7:0]), 
+               .B(Co_B[7:0]), 
+               .Cin(Cin), 
+               .clk(reloj), 
+               .D(D_upa[7:0]), 
+               .DUPA(DUPA), 
+               .OEUPA(OEUPA), 
+               .Q0IN(XLXN_70), 
+               .Q7IN(Y0o), 
+               .UPAH(UPAH[9:7]), 
+               .UPAL(UPAL[3:0]), 
+               .UPAM(UPAM[6:4]), 
+               .Y0IN(XLXN_70), 
+               .C(Cout), 
+               .FC(Fc), 
+               .Fupa(), 
+               .H(), 
+               .N(), 
+               .Qupa(), 
+               .Q0OUT(Qo), 
+               .Q7OUT(), 
+               .V(), 
+               .YUPA(Yupa[7:0]), 
+               .Y0OUT(Y0o), 
+               .Y7OUT(), 
+               .Z());
+   GND XLXI_5 (.G(XLXN_70));
+   IND_FISICA XLXI_6 (.YUPA(Yupa[7:0]), 
+                      .A(XLXN_18[7:0]), 
+                      .B(XLXN_27[7:0]));
+endmodule

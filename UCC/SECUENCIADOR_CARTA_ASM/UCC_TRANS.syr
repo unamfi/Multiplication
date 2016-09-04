@@ -1,0 +1,822 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: UCC_TRANS.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "UCC_TRANS.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "UCC_TRANS"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : UCC_TRANS
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : UCC_TRANS.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/ACC.vhd" in Library work.
+Architecture behavioral of Entity acc is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/IND_FISICA.vhd" in Library work.
+Architecture behavioral of Entity ind_fisica is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/CONTADOR.vhd" in Library work.
+Architecture behavioral of Entity contador is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/CONTADOR_1S.vhd" in Library work.
+Architecture behavioral of Entity contador_1s is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/REG_FLAGS.vhd" in Library work.
+Architecture behavioral of Entity reg_flags is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UPA_IN.vhd" in Library work.
+Architecture behavioral of Entity upa_in is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UPA_OUT.vhd" in Library work.
+Architecture behavioral of Entity upa_out is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Logica.vhd" in Library work.
+Architecture behavioral of Entity logica is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/MUX_4_1.vhd" in Library work.
+Architecture behavioral of Entity mux_4_1 is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Memoria.vhd" in Library work.
+Architecture behavioral of Entity memoria is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Secuenciador.vhd" in Library work.
+Architecture behavioral of Entity secuenciador is up to date.
+Compiling verilog file "REG_3ER_ESTADO.v" in library work
+Compiling verilog file "TRANSEIVER.v" in library work
+Module <REG_3ER_ESTADO> compiled
+Compiling verilog file "ArquitecturaCompuesta.vf" in library work
+Module <TRANSEIVER> compiled
+Compiling verilog file "UPA.vf" in library work
+Module <ArquitecturaCompuesta> compiled
+Compiling verilog file "MULTIPLICACION.vf" in library work
+Module <UPA> compiled
+Compiling verilog file "UCC_TRANS.vf" in library work
+Module <MULTIPLICACION> compiled
+Module <UCC_TRANS> compiled
+No errors in compilation
+Analysis of file <"UCC_TRANS.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <UCC_TRANS> in library <work>.
+
+Analyzing hierarchy for module <MULTIPLICACION> in library <work>.
+
+Analyzing hierarchy for entity <acc> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <UPA> in library <work>.
+
+Analyzing hierarchy for entity <ind_fisica> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <ArquitecturaCompuesta> in library <work>.
+
+Analyzing hierarchy for module <TRANSEIVER> in library <work>.
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <upa_in> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <upa_out> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <reg_flags> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <contador> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <contador_1s> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <REG_3ER_ESTADO> in library <work>.
+
+Analyzing hierarchy for entity <logica> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <secuenciador> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux_4_1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <memoria> in library <work> (architecture <behavioral>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <UCC_TRANS>.
+Module <UCC_TRANS> is correct for synthesis.
+ 
+Analyzing module <MULTIPLICACION> in library <work>.
+WARNING:Xst:852 - "MULTIPLICACION.vf" line 67: Unconnected input port 'INT' of instance 'XLXI_1' is tied to GND.
+WARNING:Xst:852 - "MULTIPLICACION.vf" line 67: Unconnected input port 'TRANS' of instance 'XLXI_1' is tied to GND.
+Module <MULTIPLICACION> is correct for synthesis.
+ 
+Analyzing module <ArquitecturaCompuesta> in library <work>.
+Module <ArquitecturaCompuesta> is correct for synthesis.
+ 
+Analyzing module <REG_3ER_ESTADO> in library <work>.
+Module <REG_3ER_ESTADO> is correct for synthesis.
+ 
+Analyzing Entity <logica> in library <work> (Architecture <behavioral>).
+Entity <logica> analyzed. Unit <logica> generated.
+
+Analyzing Entity <secuenciador> in library <work> (Architecture <behavioral>).
+Entity <secuenciador> analyzed. Unit <secuenciador> generated.
+
+Analyzing Entity <mux_4_1> in library <work> (Architecture <behavioral>).
+Entity <mux_4_1> analyzed. Unit <mux_4_1> generated.
+
+Analyzing Entity <memoria> in library <work> (Architecture <behavioral>).
+Entity <memoria> analyzed. Unit <memoria> generated.
+
+Analyzing module <TRANSEIVER> in library <work>.
+Module <TRANSEIVER> is correct for synthesis.
+ 
+Analyzing Entity <acc> in library <work> (Architecture <behavioral>).
+Entity <acc> analyzed. Unit <acc> generated.
+
+Analyzing module <UPA> in library <work>.
+Module <UPA> is correct for synthesis.
+ 
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing Entity <upa_in> in library <work> (Architecture <behavioral>).
+Entity <upa_in> analyzed. Unit <upa_in> generated.
+
+Analyzing Entity <upa_out> in library <work> (Architecture <behavioral>).
+Entity <upa_out> analyzed. Unit <upa_out> generated.
+
+Analyzing Entity <reg_flags> in library <work> (Architecture <behavioral>).
+Entity <reg_flags> analyzed. Unit <reg_flags> generated.
+
+Analyzing Entity <contador> in library <work> (Architecture <behavioral>).
+Entity <contador> analyzed. Unit <contador> generated.
+
+Analyzing Entity <contador_1s> in library <work> (Architecture <behavioral>).
+Entity <contador_1s> analyzed. Unit <contador_1s> generated.
+
+Analyzing Entity <ind_fisica> in library <work> (Architecture <behavioral>).
+Entity <ind_fisica> analyzed. Unit <ind_fisica> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <acc>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/ACC.vhd".
+    Found 8-bit tristate buffer for signal <Ao>.
+    Found 8-bit tristate buffer for signal <Bo>.
+    Found 8-bit 4-to-1 multiplexer for signal <$mux0001>.
+    Found 8-bit register for signal <LATCH_IN>.
+    Found 8-bit register for signal <LATCH_OUT>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <acc> synthesized.
+
+
+Synthesizing Unit <ind_fisica>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/IND_FISICA.vhd".
+Unit <ind_fisica> synthesized.
+
+
+Synthesizing Unit <TRANSEIVER>.
+    Related source file is "TRANSEIVER.v".
+    Found 8-bit tristate buffer for signal <rsalida>.
+    Summary:
+	inferred   8 Tristate(s).
+Unit <TRANSEIVER> synthesized.
+
+
+Synthesizing Unit <REG_3ER_ESTADO>.
+    Related source file is "REG_3ER_ESTADO.v".
+    Found 4-bit tristate buffer for signal <rsalida>.
+    Summary:
+	inferred   4 Tristate(s).
+Unit <REG_3ER_ESTADO> synthesized.
+
+
+Synthesizing Unit <logica>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Logica.vhd".
+    Found 4-bit 8-to-1 multiplexer for signal <TEMP>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <logica> synthesized.
+
+
+Synthesizing Unit <secuenciador>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Secuenciador.vhd".
+    Found 4-bit up counter for signal <TEMP>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <secuenciador> synthesized.
+
+
+Synthesizing Unit <mux_4_1>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/MUX_4_1.vhd".
+    Found 1-bit 4-to-1 multiplexer for signal <Qsel>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_4_1> synthesized.
+
+
+Synthesizing Unit <memoria>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Memoria.vhd".
+WARNING:Xst:646 - Signal <TEMP<31:29>> is assigned but never used.
+    Found 16x32-bit ROM for signal <TEMP>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <memoria> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/ALU.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <C>.
+    Found 8-bit adder carry in for signal <$add0000> created at line 31.
+    Found 8-bit subtractor for signal <$addsub0000> created at line 36.
+    Found 8-bit subtractor for signal <$addsub0001> created at line 41.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0000> created at line 29.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0001> created at line 29.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0002> created at line 29.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0003> created at line 29.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0004> created at line 29.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0005> created at line 29.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0006> created at line 29.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0007> created at line 29.
+    Found 8-bit subtractor for signal <$sub0000> created at line 36.
+    Found 8-bit subtractor for signal <$sub0001> created at line 41.
+    Found 1-bit xor2 for signal <$xor0000> created at line 68.
+    Found 1-bit xor2 for signal <$xor0001> created at line 68.
+    Found 1-bit xor2 for signal <$xor0002> created at line 68.
+    Found 1-bit xor2 for signal <$xor0003> created at line 68.
+    Found 1-bit xor2 for signal <$xor0004> created at line 68.
+    Found 1-bit xor2 for signal <$xor0005> created at line 68.
+    Found 1-bit xor2 for signal <$xor0006> created at line 68.
+    Found 1-bit xor2 for signal <$xor0007> created at line 68.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <upa_in>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UPA_IN.vhd".
+Unit <upa_in> synthesized.
+
+
+Synthesizing Unit <upa_out>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UPA_OUT.vhd".
+WARNING:Xst:647 - Input <Cin> is never used.
+    Found 8-bit tristate buffer for signal <YUPA>.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0004> created at line 39.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0006> created at line 39.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0008> created at line 39.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0010> created at line 39.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0012> created at line 39.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0013> created at line 39.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0014> created at line 39.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0015> created at line 39.
+    Found 8-bit register for signal <Qi>.
+    Found 8-bit register for signal <Yi>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <upa_out> synthesized.
+
+
+Synthesizing Unit <reg_flags>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/REG_FLAGS.vhd".
+    Found 5-bit register for signal <F>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <reg_flags> synthesized.
+
+
+Synthesizing Unit <contador>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/CONTADOR.vhd".
+    Found 3-bit up counter for signal <cuenta>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <contador> synthesized.
+
+
+Synthesizing Unit <contador_1s>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/CONTADOR_1S.vhd".
+    Found 2-bit up counter for signal <cuenta>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <contador_1s> synthesized.
+
+
+Synthesizing Unit <UPA>.
+    Related source file is "UPA.vf".
+Unit <UPA> synthesized.
+
+
+Synthesizing Unit <ArquitecturaCompuesta>.
+    Related source file is "ArquitecturaCompuesta.vf".
+Unit <ArquitecturaCompuesta> synthesized.
+
+
+Synthesizing Unit <MULTIPLICACION>.
+    Related source file is "MULTIPLICACION.vf".
+Unit <MULTIPLICACION> synthesized.
+
+
+Synthesizing Unit <UCC_TRANS>.
+    Related source file is "UCC_TRANS.vf".
+Unit <UCC_TRANS> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 5
+ 8-bit adder carry in                                  : 1
+ 8-bit subtractor                                      : 4
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 25
+ 1-bit register                                        : 21
+ 8-bit register                                        : 4
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Multiplexers                                         : 20
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 16
+ 4-bit 8-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+# Tristates                                            : 10
+ 4-bit tristate buffer                                 : 3
+ 8-bit tristate buffer                                 : 7
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+WARNING:Xst:1291 - FF/Latch <F_2> is unconnected in block <XLXI_4>.
+WARNING:Xst:1291 - FF/Latch <F_0> is unconnected in block <XLXI_4>.
+WARNING:Xst:1291 - FF/Latch <F_1> is unconnected in block <XLXI_4>.
+WARNING:Xst:1291 - FF/Latch <F_3> is unconnected in block <XLXI_4>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 5
+ 8-bit adder carry in                                  : 1
+ 8-bit subtractor                                      : 4
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Multiplexers                                         : 20
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 16
+ 4-bit 8-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1291 - FF/Latch <XLXI_4/XLXI_4/F_2> is unconnected in block <UCC_TRANS>.
+WARNING:Xst:1291 - FF/Latch <XLXI_4/XLXI_4/F_0> is unconnected in block <UCC_TRANS>.
+WARNING:Xst:1291 - FF/Latch <XLXI_4/XLXI_4/F_1> is unconnected in block <UCC_TRANS>.
+WARNING:Xst:1291 - FF/Latch <XLXI_4/XLXI_4/F_3> is unconnected in block <UCC_TRANS>.
+WARNING:Xst:2040 - Unit UCC_TRANS: 12 multi-source signals are replaced by logic (pull-up yes): XLXI_1/XLXI_1/XLXN_125<0>, XLXI_1/XLXI_1/XLXN_125<1>, XLXI_1/XLXI_1/XLXN_125<2>, XLXI_1/XLXI_1/XLXN_125<3>, Yupa<0>, Yupa<1>, Yupa<2>, Yupa<3>, Yupa<4>, Yupa<5>, Yupa<6>, Yupa<7>.
+WARNING:Xst:2042 - Unit upa_out: 8 internal tristates are replaced by logic (pull-up yes): YUPA<0>, YUPA<1>, YUPA<2>, YUPA<3>, YUPA<4>, YUPA<5>, YUPA<6>, YUPA<7>.
+
+Optimizing unit <UCC_TRANS> ...
+
+Optimizing unit <upa_in> ...
+
+Optimizing unit <alu> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block UCC_TRANS, actual ratio is 10.
+FlipFlop XLXI_1/XLXI_1/XLXI_6/TEMP_0 has been replicated 6 time(s)
+FlipFlop XLXI_1/XLXI_1/XLXI_6/TEMP_1 has been replicated 5 time(s)
+FlipFlop XLXI_1/XLXI_1/XLXI_6/TEMP_2 has been replicated 5 time(s)
+FlipFlop XLXI_1/XLXI_1/XLXI_6/TEMP_3 has been replicated 4 time(s)
+FlipFlop XLXI_4/XLXI_4/F_4 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 79
+ Flip-Flops                                            : 79
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : UCC_TRANS.ngr
+Top Level Output File Name         : UCC_TRANS
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 88
+
+Cell Usage :
+# BELS                             : 455
+#      AND2                        : 1
+#      GND                         : 2
+#      INV                         : 1
+#      LUT2                        : 21
+#      LUT3                        : 66
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 224
+#      LUT4_D                      : 18
+#      LUT4_L                      : 39
+#      MUXCY                       : 21
+#      MUXF5                       : 32
+#      MUXF6                       : 2
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 80
+#      FD                          : 3
+#      FDCE                        : 3
+#      FDE_1                       : 32
+#      FDR                         : 14
+#      FDRS                        : 11
+#      FDS                         : 16
+#      LD_1                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 79
+#      IBUF                        : 26
+#      OBUF                        : 21
+#      OBUFT                       : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                     196  out of   1920    10%  
+ Number of Slice Flip Flops:            79  out of   3840     2%  
+ Number of 4 input LUTs:               372  out of   3840     9%  
+ Number of IOs:                         88
+ Number of bonded IOBs:                 80  out of    173    46%  
+    IOB Flip Flops:                      1
+ Number of GCLKs:                        1  out of      8    12%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------+----------------------------+-------+
+Clock Signal                                      | Clock buffer(FF name)      | Load  |
+--------------------------------------------------+----------------------------+-------+
+reloj                                             | BUFGP                      | 59    |
+XLXI_4/XLXI_7/cuenta_1                            | NONE(XLXI_4/XLXI_4/F_4_1)  | 2     |
+XLXI_4/kkk(XLXI_4/XLXI_6:O)                       | NONE(*)(XLXI_4/XLXI_3/Qi_2)| 18    |
+XLXI_4/XLXI_1/_not0011(XLXI_4/XLXI_1/_not001111:O)| NONE(*)(XLXI_4/XLXI_1/C)   | 1     |
+--------------------------------------------------+----------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------+-----------------------------+-------+
+Control Signal                             | Buffer(FF name)             | Load  |
+-------------------------------------------+-----------------------------+-------+
+XLXI_4/XLXN_6(XLXI_4/XLXI_2/_cmp_eq00001:O)| NONE(XLXI_4/XLXI_5/cuenta_2)| 3     |
+-------------------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.718ns (Maximum Frequency: 93.302MHz)
+   Minimum input arrival time before clock: 7.319ns
+   Maximum output required time after clock: 9.365ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'reloj'
+  Clock period: 10.718ns (frequency: 93.302MHz)
+  Total number of paths / destination ports: 2039 / 105
+-------------------------------------------------------------------------
+Delay:               5.359ns (Levels of Logic = 3)
+  Source:            XLXI_1/XLXI_1/XLXI_6/TEMP_3_2 (FF)
+  Destination:       XLXI_3/LATCH_OUT_4 (FF)
+  Source Clock:      reloj rising
+  Destination Clock: reloj falling
+
+  Data Path: XLXI_1/XLXI_1/XLXI_6/TEMP_3_2 to XLXI_3/LATCH_OUT_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             3   0.626   1.066  XLXI_1/XLXI_1/XLXI_6/TEMP_3_2 (XLXI_1/XLXI_1/XLXI_6/TEMP_3_2)
+     LUT4:I0->O            8   0.479   0.980  XLXI_1/XLXI_1/XLXI_15/Mrom_TEMP12 (N15)
+     LUT4:I2->O            4   0.479   1.074  Yupa<7>LogicTrst_SW0 (N1072)
+     LUT4:I0->O            1   0.479   0.000  XLXI_3/_mux0000<7> (XLXI_3/_mux0000<7>)
+     FDE_1:D                   0.176          XLXI_3/LATCH_OUT_7
+    ----------------------------------------
+    Total                      5.359ns (2.239ns logic, 3.120ns route)
+                                       (41.8% logic, 58.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_4/kkk'
+  Clock period: 9.596ns (frequency: 104.212MHz)
+  Total number of paths / destination ports: 1032 / 34
+-------------------------------------------------------------------------
+Delay:               9.596ns (Levels of Logic = 14)
+  Source:            XLXI_4/XLXI_3/Qi_0 (FF)
+  Destination:       XLXI_4/XLXI_3/Yi_6 (FF)
+  Source Clock:      XLXI_4/kkk rising
+  Destination Clock: XLXI_4/kkk rising
+
+  Data Path: XLXI_4/XLXI_3/Qi_0 to XLXI_4/XLXI_3/Yi_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              6   0.626   0.912  XLXI_4/XLXI_3/Qi_0 (XLXI_4/XLXI_3/Qi_0)
+     LUT4:I2->O            6   0.479   1.023  XLXI_4/XLXI_2/R<0>24 (XLXI_4/XLXN_7<0>)
+     LUT2:I1->O            1   0.479   0.000  XLXI_4/XLXI_1/Madd__add0000_lut<0>1 (N1154)
+     MUXCY:S->O            1   0.435   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<0> (XLXI_4/XLXI_1/Madd__add0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<1> (XLXI_4/XLXI_1/Madd__add0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<2> (XLXI_4/XLXI_1/Madd__add0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<3> (XLXI_4/XLXI_1/Madd__add0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<4> (XLXI_4/XLXI_1/Madd__add0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<5> (XLXI_4/XLXI_1/Madd__add0000_cy<5>)
+     XORCY:CI->O           3   0.786   0.830  XLXI_4/XLXI_1/Madd__add0000_xor<6> (XLXI_4/XLXI_1/_add0000<6>)
+     LUT4:I2->O            1   0.479   0.000  XLXI_4/XLXI_1/Msub__sub0000_cy<5>11_SW1_G (N1455)
+     MUXF5:I1->O           1   0.314   0.704  XLXI_4/XLXI_1/Msub__sub0000_cy<5>11_SW1 (N1351)
+     LUT4:I3->O            1   0.479   0.000  XLXI_4/XLXI_1/UPA<5>_f5_0_F (N1456)
+     MUXF5:I0->O           2   0.314   0.804  XLXI_4/XLXI_1/UPA<5>_f5_0 (XLXI_4/XLXI_1/UPA<5>_f51)
+     LUT4:I2->O            1   0.479   0.000  XLXI_4/XLXI_3/_mux0009781 (N1140)
+     FDS:D                     0.176          XLXI_4/XLXI_3/Yi_6
+    ----------------------------------------
+    Total                      9.596ns (5.324ns logic, 4.272ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reloj'
+  Total number of paths / destination ports: 160 / 56
+-------------------------------------------------------------------------
+Offset:              4.427ns (Levels of Logic = 4)
+  Source:            Ci_Acc<0> (PAD)
+  Destination:       XLXI_3/LATCH_IN_0 (FF)
+  Destination Clock: reloj falling
+
+  Data Path: Ci_Acc<0> to XLXI_3/LATCH_IN_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.715   1.125  Ci_Acc_0_IBUF (Ci_Acc_0_IBUF)
+     LUT4_L:I1->LO         1   0.479   0.123  Yupa<0>LogicTrst_SW5_SW0 (N1380)
+     LUT4:I3->O            1   0.479   0.851  Yupa<0>LogicTrst_SW5 (N1303)
+     LUT4:I1->O            1   0.479   0.000  XLXI_3/_mux0001<0>1 (XLXI_3/_mux0001<0>)
+     FDE_1:D                   0.176          XLXI_3/LATCH_IN_0
+    ----------------------------------------
+    Total                      4.427ns (2.328ns logic, 2.099ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_4/XLXI_1/_not0011'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.517ns (Levels of Logic = 10)
+  Source:            Cin (PAD)
+  Destination:       XLXI_4/XLXI_1/C (LATCH)
+  Destination Clock: XLXI_4/XLXI_1/_not0011 rising
+
+  Data Path: Cin to XLXI_4/XLXI_1/C
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.715   0.906  Cin_IBUF (Cin_IBUF)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<0> (XLXI_4/XLXI_1/Madd__add0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<1> (XLXI_4/XLXI_1/Madd__add0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<2> (XLXI_4/XLXI_1/Madd__add0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<3> (XLXI_4/XLXI_1/Madd__add0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<4> (XLXI_4/XLXI_1/Madd__add0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<5> (XLXI_4/XLXI_1/Madd__add0000_cy<5>)
+     MUXCY:CI->O           0   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<6> (XLXI_4/XLXI_1/Madd__add0000_cy<6>)
+     XORCY:CI->O           3   0.786   1.066  XLXI_4/XLXI_1/Madd__add0000_xor<7> (XLXI_4/XLXI_1/_add0000<7>)
+     LUT4:I0->O            1   0.479   0.000  XLXI_4/XLXI_1/_or00001 (XLXI_4/XLXI_1/_or0000)
+     LD_1:D                    0.176          XLXI_4/XLXI_1/C
+    ----------------------------------------
+    Total                      4.517ns (2.545ns logic, 1.972ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_4/kkk'
+  Total number of paths / destination ports: 50 / 16
+-------------------------------------------------------------------------
+Offset:              7.319ns (Levels of Logic = 13)
+  Source:            Cin (PAD)
+  Destination:       XLXI_4/XLXI_3/Yi_6 (FF)
+  Destination Clock: XLXI_4/kkk rising
+
+  Data Path: Cin to XLXI_4/XLXI_3/Yi_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.715   0.906  Cin_IBUF (Cin_IBUF)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<0> (XLXI_4/XLXI_1/Madd__add0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<1> (XLXI_4/XLXI_1/Madd__add0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<2> (XLXI_4/XLXI_1/Madd__add0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<3> (XLXI_4/XLXI_1/Madd__add0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<4> (XLXI_4/XLXI_1/Madd__add0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  XLXI_4/XLXI_1/Madd__add0000_cy<5> (XLXI_4/XLXI_1/Madd__add0000_cy<5>)
+     XORCY:CI->O           3   0.786   0.830  XLXI_4/XLXI_1/Madd__add0000_xor<6> (XLXI_4/XLXI_1/_add0000<6>)
+     LUT4:I2->O            1   0.479   0.000  XLXI_4/XLXI_1/Msub__sub0000_cy<5>11_SW1_G (N1455)
+     MUXF5:I1->O           1   0.314   0.704  XLXI_4/XLXI_1/Msub__sub0000_cy<5>11_SW1 (N1351)
+     LUT4:I3->O            1   0.479   0.000  XLXI_4/XLXI_1/UPA<5>_f5_0_F (N1456)
+     MUXF5:I0->O           2   0.314   0.804  XLXI_4/XLXI_1/UPA<5>_f5_0 (XLXI_4/XLXI_1/UPA<5>_f51)
+     LUT4:I2->O            1   0.479   0.000  XLXI_4/XLXI_3/_mux0009781 (N1140)
+     FDS:D                     0.176          XLXI_4/XLXI_3/Yi_6
+    ----------------------------------------
+    Total                      7.319ns (4.075ns logic, 3.244ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_4/XLXI_7/cuenta_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            XLXI_4/XLXI_4/F_4_1 (FF)
+  Destination:       Cout (PAD)
+  Source Clock:      XLXI_4/XLXI_7/cuenta_1 rising
+
+  Data Path: XLXI_4/XLXI_4/F_4_1 to Cout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.626   0.681  XLXI_4/XLXI_4/F_4_1 (XLXI_4/XLXI_4/F_4_1)
+     OBUF:I->O                 4.909          Cout_OBUF (Cout)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reloj'
+  Total number of paths / destination ports: 66 / 52
+-------------------------------------------------------------------------
+Offset:              9.365ns (Levels of Logic = 3)
+  Source:            XLXI_3/LATCH_OUT_4 (FF)
+  Destination:       ZB (PAD)
+  Source Clock:      reloj falling
+
+  Data Path: XLXI_3/LATCH_OUT_4 to ZB
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            8   0.626   1.216  XLXI_3/LATCH_OUT_4 (XLXI_3/LATCH_OUT_4)
+     LUT4:I0->O            1   0.479   0.976  XLXI_3/Z12 (XLXI_3/Z_map294)
+     LUT2:I0->O            1   0.479   0.681  XLXI_3/Z26 (ZB_OBUF)
+     OBUF:I->O                 4.909          ZB_OBUF (ZB)
+    ----------------------------------------
+    Total                      9.365ns (6.493ns logic, 2.872ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+CPU : 14.19 / 14.45 s | Elapsed : 14.00 / 14.00 s
+ 
+--> 
+
+Total memory usage is 137464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

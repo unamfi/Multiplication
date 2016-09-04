@@ -1,0 +1,8 @@
+vhdl work "Secuenciador.vhd"
+vhdl work "Memoria.vhd"
+vhdl work "MUX_4_1.vhd"
+vhdl work "Logica.vhd"
+verilog work "REG_3ER_ESTADO.v"
+verilog work "ArquitecturaCompuesta.vf"
+verilog work "MULTIPLICACION.vf"
+verilog work C:/Xilinx/verilog/src/glbl.v

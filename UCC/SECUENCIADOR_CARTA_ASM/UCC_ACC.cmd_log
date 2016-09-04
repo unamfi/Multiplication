@@ -1,0 +1,7 @@
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UCC_ACC.sch" UCC_ACC.vf
+xst -ise "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/PROY_AC.ise" -intstyle ise -ifn UCC_ACC.xst -ofn UCC_ACC.syr
+xst -ise "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/PROY_AC.ise" -intstyle ise -ifn UCC_ACC.xst -ofn UCC_ACC.syr
+xst -ise "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/PROY_AC.ise" -intstyle ise -ifn UCC_ACC.xst -ofn UCC_ACC.syr
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UCC_ACC.sch" UCC_ACC.vf
+xst -ise "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/PROY_AC.ise" -intstyle ise -ifn UCC_ACC.xst -ofn UCC_ACC.syr
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UCC_ACC.sch" UCC_ACC.vf

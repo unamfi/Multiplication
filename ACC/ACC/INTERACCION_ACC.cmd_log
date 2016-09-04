@@ -1,0 +1,7 @@
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.sch" INTERACCION_ACC.vf
+xst -ise "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.ise" -intstyle ise -ifn INTERACCION_ACC.xst -ofn INTERACCION_ACC.syr
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.sch" INTERACCION_ACC.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.sch" INTERACCION_ACC.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.sch" INTERACCION_ACC.vf
+xst -ise "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.ise" -intstyle ise -ifn INTERACCION_ACC.xst -ofn INTERACCION_ACC.syr
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.sch" INTERACCION_ACC.vf

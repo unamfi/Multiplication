@@ -1,0 +1,609 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : SIM_V20.ant
+// /___/   /\     Timestamp : Thu Oct 25 16:00:13 2012
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: SIM_V20
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module SIM_V20;
+    reg clk = 1'b0;
+    reg reset = 1'b0;
+    wire DUPA;
+    wire EA0;
+    wire EA1;
+    wire EB0;
+    wire EB1;
+    wire HBA;
+    wire HBB;
+    wire OEUPA;
+    wire [9:7] UPAH;
+    wire [3:0] UPAL;
+    wire [6:4] UPAM;
+    wire WA;
+    wire WB;
+
+
+    MULTIPLICACION UUT (
+        .clk(clk),
+        .reset(reset),
+        .DUPA(DUPA),
+        .EA0(EA0),
+        .EA1(EA1),
+        .EB0(EB0),
+        .EB1(EB1),
+        .HBA(HBA),
+        .HBB(HBB),
+        .OEUPA(OEUPA),
+        .UPAH(UPAH),
+        .UPAL(UPAL),
+        .UPAM(UPAM),
+        .WA(WA),
+        .WB(WB));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_DUPA;
+        ANNOTATE_EA0;
+        ANNOTATE_EA1;
+        ANNOTATE_EB0;
+        ANNOTATE_EB1;
+        ANNOTATE_HBA;
+        ANNOTATE_HBB;
+        ANNOTATE_OEUPA;
+        ANNOTATE_UPAH;
+        ANNOTATE_UPAL;
+        ANNOTATE_UPAM;
+        ANNOTATE_WA;
+        ANNOTATE_WB;
+        forever begin
+            #50;
+            ANNOTATE_DUPA;
+            ANNOTATE_EA0;
+            ANNOTATE_EA1;
+            ANNOTATE_EB0;
+            ANNOTATE_EB1;
+            ANNOTATE_HBA;
+            ANNOTATE_HBB;
+            ANNOTATE_OEUPA;
+            ANNOTATE_UPAH;
+            ANNOTATE_UPAL;
+            ANNOTATE_UPAM;
+            ANNOTATE_WA;
+            ANNOTATE_WB;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Documents and Settings\\CARLOS\\Desktop\\ALGORITMO_MULTIPLICACION\\UCC\\SECUENCIADOR_CARTA_ASM\\SIM_V20.ano");
+        #10000 // Final time:  10000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9000ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9100ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9200ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9300ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9400ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9500ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9600ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9700ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9800ns
+        #100;
+        clk = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9900ns
+        #100;
+        clk = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  10000ns
+        #100;
+        clk = 1'b0;
+    end
+
+    task ANNOTATE_DUPA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,DUPA,%b]", $time, DUPA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EA0;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EA0,%b]", $time, EA0);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EA1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EA1,%b]", $time, EA1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EB0;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EB0,%b]", $time, EB0);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EB1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EB1,%b]", $time, EB1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_HBA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,HBA,%b]", $time, HBA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_HBB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,HBB,%b]", $time, HBB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_OEUPA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,OEUPA,%b]", $time, OEUPA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_UPAH;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,UPAH,%b]", $time, UPAH);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_UPAL;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,UPAL,%b]", $time, UPAL);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_UPAM;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,UPAM,%b]", $time, UPAM);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_WA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,WA,%b]", $time, WA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_WB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,WB,%b]", $time, WB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

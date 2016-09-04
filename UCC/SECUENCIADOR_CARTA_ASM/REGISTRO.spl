@@ -1,0 +1,9 @@
+[Inputs]
+clk
+NW
+=INR[7:0]=
+[Outputs]
+Z
+N
+=OUTR[7:0]=
+[BiDir]

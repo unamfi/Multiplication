@@ -1,0 +1,1 @@
+xst -ise "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.ise" -intstyle ise -ifn CONTADOR.xst -ofn CONTADOR.syr

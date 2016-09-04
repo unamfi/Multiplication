@@ -1,0 +1,9 @@
+[Inputs]
+Qsel
+=MI[2:0]=
+[Outputs]
+VECT
+MAPS
+MPC
+PL
+[BiDir]

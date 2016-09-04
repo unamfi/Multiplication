@@ -1,0 +1,4 @@
+vhdl work "ACC.vhd"
+verilog work "INTERACCION_ACC.vf"
+verilog work "INTERACCION.tfw"
+verilog work "C:/Xilinx/verilog/src/glbl.v"

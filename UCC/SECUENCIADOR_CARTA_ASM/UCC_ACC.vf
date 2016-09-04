@@ -1,0 +1,135 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : UCC_ACC.vf
+// /___/   /\     Timestamp : 10/25/2012 14:59:27
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UCC_ACC.sch" UCC_ACC.vf
+//Design Name: UCC_ACC
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module UCC_ACC(Ci_A, 
+               Ci_B, 
+               clk, 
+               DATO_A, 
+               DATO_B, 
+               FC, 
+               QO, 
+               reset, 
+               Ao_A, 
+               Ao_B, 
+               Bo_A, 
+               Bo_B, 
+               Co_A, 
+               Co_B, 
+               DUPA, 
+               NA, 
+               NB, 
+               OEUPA, 
+               UPA_H, 
+               UPA_L, 
+               UPA_M, 
+               ZA, 
+               ZB);
+
+    input [7:0] Ci_A;
+    input [7:0] Ci_B;
+    input clk;
+    input [7:0] DATO_A;
+    input [7:0] DATO_B;
+    input FC;
+    input QO;
+    input reset;
+   output [7:0] Ao_A;
+   output [7:0] Ao_B;
+   output [7:0] Bo_A;
+   output [7:0] Bo_B;
+   output [7:0] Co_A;
+   output [7:0] Co_B;
+   output DUPA;
+   output NA;
+   output NB;
+   output OEUPA;
+   output [9:7] UPA_H;
+   output [3:0] UPA_L;
+   output [6:4] UPA_M;
+   output ZA;
+   output ZB;
+   
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_24;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire [7:0] XLXN_54;
+   wire [7:0] XLXN_55;
+   
+   ArquitecturaCompuesta XLXI_1 (.AUX(XLXN_24), 
+                                 .FC(FC), 
+                                 .I(XLXN_24), 
+                                 .INT(), 
+                                 .Q0(QO), 
+                                 .reloj(clk), 
+                                 .Reset(reset), 
+                                 .TRANS(), 
+                                 .DUPA(DUPA), 
+                                 .EOB(XLXN_9), 
+                                 .E0A(XLXN_7), 
+                                 .E1A(XLXN_8), 
+                                 .E1B(XLXN_10), 
+                                 .HBA(XLXN_12), 
+                                 .HBB(XLXN_13), 
+                                 .OEUPA(OEUPA), 
+                                 .UPAH(UPA_H[9:7]), 
+                                 .UPAL(UPA_L[3:0]), 
+                                 .UPAM(UPA_M[6:4]), 
+                                 .WA(XLXN_46), 
+                                 .WB(XLXN_47));
+   ACC XLXI_2 (.Ai(XLXN_54[7:0]), 
+               .Bi(XLXN_55[7:0]), 
+               .Ci(Ci_A[7:0]), 
+               .clk(clk), 
+               .E0(XLXN_7), 
+               .E1(XLXN_8), 
+               .NW(XLXN_46), 
+               .Ao(Ao_A[7:0]), 
+               .Bo(Bo_A[7:0]), 
+               .Co(Co_A[7:0]), 
+               .N(NA), 
+               .Z(ZA));
+   ACC XLXI_3 (.Ai(XLXN_54[7:0]), 
+               .Bi(XLXN_55[7:0]), 
+               .Ci(Ci_B[7:0]), 
+               .clk(clk), 
+               .E0(XLXN_9), 
+               .E1(XLXN_10), 
+               .NW(XLXN_47), 
+               .Ao(Ao_B[7:0]), 
+               .Bo(Bo_B[7:0]), 
+               .Co(Co_B[7:0]), 
+               .N(NB), 
+               .Z(ZB));
+   TRANSEIVER XLXI_4 (.Hab(XLXN_12), 
+                      .INR(DATO_A[7:0]), 
+                      .OUTR(XLXN_54[7:0]));
+   TRANSEIVER XLXI_5 (.Hab(XLXN_13), 
+                      .INR(DATO_B[7:0]), 
+                      .OUTR(XLXN_55[7:0]));
+   GND XLXI_6 (.G(XLXN_24));
+endmodule

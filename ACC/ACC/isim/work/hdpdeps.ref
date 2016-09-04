@@ -1,0 +1,33 @@
+V3 18
+FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION.tfw" 2012/10/20.01:56:43 I.31
+MO work/INTERACCION \
+      FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION.tfw" \
+      MI INTERACCION_ACC
+FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM.vhw" 2012/10/20.01:03:36 I.31
+EN work/SIM 1350714212             FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM.vhw" \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/SIM/testbench_arch 1350714213 \
+      FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM.vhw" EN work/SIM 1350714212 \
+      CP ACC            PB ieee/STD_LOGIC_TEXTIO 1147840859
+FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.vf" 2012/10/20.01:55:28 I.31
+MO work/INTERACCION_ACC \
+      FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/INTERACCION_ACC.vf" \
+      MI ACC
+FL $XILINX/verilog/src/glbl.v 2006/05/17.13:09:08 I.31
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM_V2.vhw" 2012/10/20.02:00:24 I.31
+EN work/SIM_V2 1350716432          FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM_V2.vhw" \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857 PB ieee/STD_LOGIC_TEXTIO 1147840859 \
+      PB std/textio 1147840824
+AR work/SIM_V2/testbench_arch 1350716433 \
+      FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM_V2.vhw" \
+      EN work/SIM_V2 1350716432 CP ACC     PB ieee/STD_LOGIC_TEXTIO 1147840859
+FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd" 2012/10/20.01:39:52 I.31
+EN work/ACC 1350715214             FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd" \
+      PB ieee/std_logic_1164 1147840849 PB ieee/std_logic_arith 1147840851 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147840857
+AR work/ACC/Behavioral 1350715215 \
+      FL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd" EN work/ACC 1350715214

@@ -1,0 +1,392 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: INTERACCION_ACC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "INTERACCION_ACC.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "INTERACCION_ACC"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : INTERACCION_ACC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : INTERACCION_ACC.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd" in Library work.
+Architecture behavioral of Entity acc is up to date.
+Compiling verilog file "INTERACCION_ACC.vf" in library work
+Module <INTERACCION_ACC> compiled
+No errors in compilation
+Analysis of file <"INTERACCION_ACC.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <INTERACCION_ACC> in library <work>.
+
+Analyzing hierarchy for entity <acc> in library <work> (architecture <behavioral>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <INTERACCION_ACC>.
+Module <INTERACCION_ACC> is correct for synthesis.
+ 
+Analyzing Entity <acc> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd" line 25: The following signals are missing in the process sensitivity list:
+   NW, A, B, C.
+Entity <acc> analyzed. Unit <acc> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <acc>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd".
+WARNING:Xst:646 - Signal <LATCH_IN> is assigned but never used.
+    Found 8-bit tristate buffer for signal <A>.
+    Found 8-bit tristate buffer for signal <B>.
+    Found 8-bit tristate buffer for signal <C>.
+    Found 8-bit tristate buffer for signal <LATCH_OUT>.
+    Found 8-bit register for signal <Mtridata_LATCH_OUT> created at line 43.
+    Found 1-bit register for signal <Mtrien_LATCH_OUT> created at line 43.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred  32 Tristate(s).
+Unit <acc> synthesized.
+
+
+Synthesizing Unit <INTERACCION_ACC>.
+    Related source file is "INTERACCION_ACC.vf".
+Unit <INTERACCION_ACC> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 8-bit register                                        : 2
+# Tristates                                            : 8
+ 8-bit tristate buffer                                 : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2042 - Unit INTERACCION_ACC: 16 internal tristates are replaced by logic (pull-up yes): N20, N21, XLXI_1/LATCH_OUT<0>, XLXI_1/LATCH_OUT<1>, XLXI_1/LATCH_OUT<2>, XLXI_1/LATCH_OUT<3>, XLXI_1/LATCH_OUT<4>, XLXI_1/LATCH_OUT<5>, XLXI_1/LATCH_OUT<6>, XLXI_2/LATCH_OUT<0>, XLXI_2/LATCH_OUT<1>, XLXI_2/LATCH_OUT<2>, XLXI_2/LATCH_OUT<3>, XLXI_2/LATCH_OUT<4>, XLXI_2/LATCH_OUT<5>, XLXI_2/LATCH_OUT<6>.
+WARNING:Xst:2040 - Unit INTERACCION_ACC: 16 multi-source signals are replaced by logic (pull-up yes): N11, N13, N15, N17, N19, N5, N7, N9, XLXN_16<0>, XLXN_16<1>, XLXN_16<2>, XLXN_16<3>, XLXN_16<4>, XLXN_16<5>, XLXN_16<6>, XLXN_16<7>.
+
+Optimizing unit <INTERACCION_ACC> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block INTERACCION_ACC, actual ratio is 2.
+FlipFlop XLXI_2/Mtrien_LATCH_OUT has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop XLXI_1/Mtrien_LATCH_OUT has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : INTERACCION_ACC.ngr
+Top Level Output File Name         : INTERACCION_ACC
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 35
+
+Cell Usage :
+# BELS                             : 83
+#      INV                         : 2
+#      LUT2                        : 20
+#      LUT3                        : 23
+#      LUT4                        : 37
+#      MUXF5                       : 1
+# FlipFlops/Latches                : 20
+#      FDE                         : 20
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 6
+#      IOBUF                       : 24
+#      OBUF                        : 2
+#      OBUFT                       : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                      45  out of   1920     2%  
+ Number of Slice Flip Flops:            18  out of   3840     0%  
+ Number of 4 input LUTs:                82  out of   3840     2%  
+ Number of IOs:                         35
+ Number of bonded IOBs:                 35  out of    173    20%  
+    IOB Flip Flops:                      2
+ Number of GCLKs:                        1  out of      8    12%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 20    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.980ns (Maximum Frequency: 200.811MHz)
+   Minimum input arrival time before clock: 5.895ns
+   Maximum output required time after clock: 10.837ns
+   Maximum combinational path delay: 10.220ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.980ns (frequency: 200.811MHz)
+  Total number of paths / destination ports: 64 / 16
+-------------------------------------------------------------------------
+Delay:               4.980ns (Levels of Logic = 3)
+  Source:            XLXI_1/Mtrien_LATCH_OUT (FF)
+  Destination:       XLXI_2/Mtridata_LATCH_OUT_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_1/Mtrien_LATCH_OUT to XLXI_2/Mtridata_LATCH_OUT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.626   1.134  XLXI_1/Mtrien_LATCH_OUT (XLXI_1/Mtrien_LATCH_OUT)
+     LUT2:I1->O            4   0.479   0.838  XLXI_1/LATCH_OUT<0>LogicTrst1 (XLXI_1/LATCH_OUT<0>)
+     LUT4:I2->O            2   0.479   0.768  XLXN_16<0>LogicTrst1 (XLXN_16<0>)
+     LUT4:I3->O            1   0.479   0.000  XLXI_2/_mux0000<0> (XLXI_2/_mux0000<0>)
+     FDE:D                     0.176          XLXI_2/Mtridata_LATCH_OUT_0
+    ----------------------------------------
+    Total                      4.980ns (2.239ns logic, 2.741ns route)
+                                       (45.0% logic, 55.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 204 / 40
+-------------------------------------------------------------------------
+Offset:              5.895ns (Levels of Logic = 4)
+  Source:            E0A (PAD)
+  Destination:       XLXI_2/Mtridata_LATCH_OUT_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: E0A to XLXI_2/Mtridata_LATCH_OUT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.715   1.583  E0A_IBUF (E0A_IBUF)
+     LUT3:I0->O            8   0.479   1.216  XLXI_2/_xor00041 (XLXI_2/_xor0004)
+     LUT4:I0->O            2   0.479   0.768  XLXN_16<0>LogicTrst1 (XLXN_16<0>)
+     LUT4:I3->O            1   0.479   0.000  XLXI_2/_mux0000<0> (XLXI_2/_mux0000<0>)
+     FDE:D                     0.176          XLXI_2/Mtridata_LATCH_OUT_0
+    ----------------------------------------
+    Total                      5.895ns (2.328ns logic, 3.567ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 102 / 28
+-------------------------------------------------------------------------
+Offset:              10.837ns (Levels of Logic = 4)
+  Source:            XLXI_1/Mtrien_LATCH_OUT (FF)
+  Destination:       ZB (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_1/Mtrien_LATCH_OUT to ZB
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.626   1.134  XLXI_1/Mtrien_LATCH_OUT (XLXI_1/Mtrien_LATCH_OUT)
+     LUT2:I1->O            4   0.479   1.074  XLXI_1/LATCH_OUT<4>LogicTrst1 (XLXI_1/LATCH_OUT<4>)
+     LUT4:I0->O            1   0.479   0.976  XLXI_1/Z12 (XLXI_1/Z_map21)
+     LUT2:I0->O            1   0.479   0.681  XLXI_1/Z26 (ZB_OBUF)
+     OBUF:I->O                 4.909          ZB_OBUF (ZB)
+    ----------------------------------------
+    Total                     10.837ns (6.972ns logic, 3.865ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 147 / 24
+-------------------------------------------------------------------------
+Delay:               10.220ns (Levels of Logic = 4)
+  Source:            E0B (PAD)
+  Destination:       BUSL<7> (PAD)
+
+  Data Path: E0B to BUSL<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   0.715   1.372  E0B_IBUF (E0B_IBUF)
+     LUT3:I2->O           10   0.479   1.134  XLXI_1/_xor00051 (XLXI_1/_xor0005)
+     LUT4:I1->O            8   0.479   0.921  N5LogicTrst11 (N0)
+     IOBUF:T->IO               5.120          BUSL_1_IOBUF (BUSL<1>)
+    ----------------------------------------
+    Total                     10.220ns (6.793ns logic, 3.427ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+CPU : 6.86 / 7.13 s | Elapsed : 7.00 / 7.00 s
+ 
+--> 
+
+Total memory usage is 131320 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

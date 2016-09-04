@@ -1,0 +1,600 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.23 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: UPA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "UPA.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "UPA"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : UPA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : UPA.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/ALU.vhd" in Library work.
+Entity <alu> compiled.
+Entity <alu> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/CONTADOR.vhd" in Library work.
+Architecture behavioral of Entity contador is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/REG_FLAGS.vhd" in Library work.
+Architecture behavioral of Entity reg_flags is up to date.
+Compiling vhdl file "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA_OUT.vhd" in Library work.
+Entity <upa_out> compiled.
+Entity <upa_out> (Architecture <behavioral>) compiled.
+Compiling verilog file "UPA.vf" in library work
+Module <UPA> compiled
+No errors in compilation
+Analysis of file <"UPA.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <UPA> in library <work>.
+
+Analyzing hierarchy for entity <upa_in> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <upa_out> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <contador> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <reg_flags> in library <work> (architecture <behavioral>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <UPA>.
+Module <UPA> is correct for synthesis.
+ 
+Analyzing Entity <upa_in> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.vhd" line 23: The following signals are missing in the process sensitivity list:
+   A, B, Q, D.
+Entity <upa_in> analyzed. Unit <upa_in> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/ALU.vhd" line 25: The following signals are missing in the process sensitivity list:
+   Cin.
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing Entity <upa_out> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA_OUT.vhd" line 30: The following signals are missing in the process sensitivity list:
+   OEUPA, Yi, Qi.
+Entity <upa_out> analyzed. Unit <upa_out> generated.
+
+Analyzing Entity <contador> in library <work> (Architecture <behavioral>).
+Entity <contador> analyzed. Unit <contador> generated.
+
+Analyzing Entity <reg_flags> in library <work> (Architecture <behavioral>).
+Entity <reg_flags> analyzed. Unit <reg_flags> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <upa_in>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.vhd".
+WARNING:Xst:737 - Found 8-bit latch for signal <R>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <S>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 8-bit 10-to-1 multiplexer for signal <$mux0000>.
+    Found 8-bit 10-to-1 multiplexer for signal <$mux0001>.
+    Summary:
+	inferred  16 Multiplexer(s).
+Unit <upa_in> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/ALU.vhd".
+WARNING:Xst:1305 - Output <C> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <H> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <V> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <Ct> is assigned but never used.
+WARNING:Xst:646 - Signal <Ht> is assigned but never used.
+WARNING:Xst:646 - Signal <Vt> is assigned but never used.
+    Found 8-bit 8-to-1 multiplexer for signal <F>.
+    Found 8-bit adder carry in for signal <$add0001> created at line 31.
+    Found 8-bit subtractor for signal <$addsub0000> created at line 36.
+    Found 8-bit subtractor for signal <$addsub0001> created at line 41.
+    Found 8-bit 8-to-1 multiplexer for signal <$mux0000> created at line 29.
+    Found 8-bit subtractor for signal <$sub0002> created at line 36.
+    Found 8-bit subtractor for signal <$sub0003> created at line 41.
+    Found 8-bit xor2 for signal <$xor0000> created at line 51.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  16 Multiplexer(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <upa_out>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA_OUT.vhd".
+WARNING:Xst:1305 - Output <Y0OUT> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <QOOUT> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <Y7OUT> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <Q7OUT> is never assigned. Tied to value 0.
+WARNING:Xst:737 - Found 8-bit latch for signal <Q>.
+    Found 8-bit tristate buffer for signal <YUPA>.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0004> created at line 34.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0006> created at line 34.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0008> created at line 34.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0010> created at line 34.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0012> created at line 34.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0013> created at line 34.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0014> created at line 34.
+    Found 1-bit 8-to-1 multiplexer for signal <$mux0015> created at line 34.
+    Found 8-bit register for signal <Qi>.
+    Found 8-bit register for signal <Yi>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <upa_out> synthesized.
+
+
+Synthesizing Unit <contador>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/CONTADOR.vhd".
+WARNING:Xst:647 - Input <INC> is never used.
+    Found 3-bit up counter for signal <cuenta>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <contador> synthesized.
+
+
+Synthesizing Unit <reg_flags>.
+    Related source file is "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/REG_FLAGS.vhd".
+    Found 5-bit register for signal <F>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <reg_flags> synthesized.
+
+
+Synthesizing Unit <UPA>.
+    Related source file is "UPA.vf".
+Unit <UPA> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 8-bit adder carry in                                  : 1
+ 8-bit subtractor                                      : 4
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 21
+ 1-bit register                                        : 21
+# Latches                                              : 3
+ 8-bit latch                                           : 3
+# Multiplexers                                         : 12
+ 1-bit 8-to-1 multiplexer                              : 8
+ 8-bit 10-to-1 multiplexer                             : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+# Tristates                                            : 1
+ 8-bit tristate buffer                                 : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 8-bit adder carry in                                  : 1
+ 8-bit subtractor                                      : 4
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+# Latches                                              : 3
+ 8-bit latch                                           : 3
+# Multiplexers                                         : 12
+ 1-bit 8-to-1 multiplexer                              : 8
+ 8-bit 10-to-1 multiplexer                             : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <UPA> ...
+
+Optimizing unit <alu> ...
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch  <XLXI_5/F_2> has a constant value of 0 in block <UPA>.
+WARNING:Xst:1293 - FF/Latch  <XLXI_5/F_0> has a constant value of 0 in block <UPA>.
+WARNING:Xst:1293 - FF/Latch  <XLXI_5/F_4> has a constant value of 0 in block <UPA>.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block UPA, actual ratio is 8.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : UPA.ngr
+Top Level Output File Name         : UPA
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 60
+
+Cell Usage :
+# BELS                             : 341
+#      AND2                        : 1
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 8
+#      LUT2                        : 37
+#      LUT3                        : 82
+#      LUT4                        : 85
+#      MUXCY                       : 21
+#      MUXF5                       : 64
+#      MUXF6                       : 16
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 45
+#      FD                          : 10
+#      FDC                         : 3
+#      FDS                         : 8
+#      LD                          : 16
+#      LD_1                        : 8
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 58
+#      IBUF                        : 40
+#      OBUF                        : 10
+#      OBUFT                       : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                     111  out of   1920     5%  
+ Number of Slice Flip Flops:            43  out of   3840     1%  
+ Number of 4 input LUTs:               213  out of   3840     5%  
+ Number of IOs:                         60
+ Number of bonded IOBs:                 60  out of    173    34%  
+    IOB Flip Flops:                      2
+ Number of GCLKs:                        2  out of      8    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+XLXN_27(XLXI_6:O)                  | NONE(*)(XLXI_3/Yi_6)   | 18    |
+XLXI_1/_or0000(XLXI_1/_or00001:O)  | NONE(*)(XLXI_1/S_3)    | 16    |
+clk                                | BUFGP                  | 3     |
+OEUPA                              | BUFGP                  | 8     |
+-----------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+XLXN_4(XLXI_1/_cmp_eq00001:O)      | NONE(XLXI_4/cuenta_0)  | 3     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.767ns (Maximum Frequency: 265.484MHz)
+   Minimum input arrival time before clock: 10.425ns
+   Maximum output required time after clock: 7.761ns
+   Maximum combinational path delay: 6.528ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.741ns (frequency: 364.790MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               2.741ns (Levels of Logic = 1)
+  Source:            XLXI_4/cuenta_0 (FF)
+  Destination:       XLXI_4/cuenta_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_4/cuenta_0 to XLXI_4/cuenta_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.626   0.779  XLXI_4/cuenta_0 (XLXI_4/cuenta_0)
+     INV:I->O              1   0.479   0.681  XLXI_4/cuenta_Madd__add0000__not00001_INV_0 (XLXI_4/cuenta__add0000<0>)
+     FDC:D                     0.176          XLXI_4/cuenta_0
+    ----------------------------------------
+    Total                      2.741ns (1.281ns logic, 1.460ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXN_27'
+  Clock period: 3.767ns (frequency: 265.484MHz)
+  Total number of paths / destination ports: 52 / 23
+-------------------------------------------------------------------------
+Delay:               3.767ns (Levels of Logic = 3)
+  Source:            XLXI_3/Qi_2 (FF)
+  Destination:       XLXI_3/Qi_1 (FF)
+  Source Clock:      XLXN_27 rising
+  Destination Clock: XLXN_27 rising
+
+  Data Path: XLXI_3/Qi_2 to XLXI_3/Qi_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.626   0.953  XLXI_3/Qi_2 (XLXI_3/Qi_2)
+     LUT3:I1->O            1   0.479   0.740  XLXI_3/UPA<9>1_G_SW0 (N661)
+     LUT3:I2->O            1   0.479   0.000  XLXI_3/UPA<9>1_G (N646)
+     MUXF5:I1->O           1   0.314   0.000  XLXI_3/UPA<9>1 (XLXI_3/_mux0006)
+     FD:D                      0.176          XLXI_3/Qi_1
+    ----------------------------------------
+    Total                      3.767ns (2.074ns logic, 1.693ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXN_27'
+  Total number of paths / destination ports: 398 / 26
+-------------------------------------------------------------------------
+Offset:              10.425ns (Levels of Logic = 10)
+  Source:            Cin (PAD)
+  Destination:       XLXI_3/Yi_7 (FF)
+  Destination Clock: XLXN_27 rising
+
+  Data Path: Cin to XLXI_3/Yi_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.715   1.250  Cin_IBUF (Cin_IBUF)
+     LUT4:I0->O            4   0.479   0.949  XLXI_2/Msub__sub0003_cy<2>11 (XLXI_2/Msub__sub0003_cy<2>)
+     LUT4:I1->O            2   0.479   0.804  XLXI_2/Msub__sub0003_cy<5>11 (XLXI_2/Msub__sub0003_cy<5>)
+     LUT3:I2->O            1   0.479   0.851  XLXI_2/UPA<4>2_SW0 (N675)
+     LUT4:I1->O            1   0.479   0.000  XLXI_2/UPA<4>2 (XLXI_2/N41)
+     MUXF5:I1->O           1   0.314   0.000  XLXI_2/UPA<5>_f5_0 (XLXI_2/UPA<5>_f51)
+     MUXF6:I0->O           4   0.298   0.838  XLXI_2/Mmux__mux0000_f6 (XLXN_23)
+     LUT3:I2->O            2   0.479   1.040  XLXI_3/_mux001125 (XLXI_3/_mux0011_map47)
+     LUT3:I0->O            1   0.479   0.000  XLXI_3/_mux0011791_F (N641)
+     MUXF5:I0->O           1   0.314   0.000  XLXI_3/_mux0011791 (N595)
+     FDS:D                     0.176          XLXI_3/Yi_7
+    ----------------------------------------
+    Total                     10.425ns (4.691ns logic, 5.734ns route)
+                                       (45.0% logic, 55.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_1/_or0000'
+  Total number of paths / destination ports: 304 / 16
+-------------------------------------------------------------------------
+Offset:              5.462ns (Levels of Logic = 6)
+  Source:            UPA<1> (PAD)
+  Destination:       XLXI_1/R_7 (LATCH)
+  Destination Clock: XLXI_1/_or0000 falling
+
+  Data Path: UPA<1> to XLXI_1/R_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            42   0.715   1.919  UPA_1_IBUF (UPA_1_IBUF)
+     LUT3:I0->O            1   0.479   0.000  UPA<1> (N1)
+     MUXF5:I0->O           1   0.314   0.000  UPA<2>_f5 (UPA<2>_f5)
+     MUXF6:I1->O           2   0.298   0.768  UPA<0>_f6 (UPA<0>_f6)
+     LUT4:I3->O            1   0.479   0.000  UPA<3>9 (N686)
+     MUXF5:I0->O           1   0.314   0.000  UPA<3>_f5 (XLXI_1/_mux0000<0>)
+     LD:D                      0.176          XLXI_1/R_0
+    ----------------------------------------
+    Total                      5.462ns (2.775ns logic, 2.687ns route)
+                                       (50.8% logic, 49.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              7.761ns (Levels of Logic = 2)
+  Source:            XLXI_4/cuenta_1 (FF)
+  Destination:       FC (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_4/cuenta_1 to FC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.626   1.066  XLXI_4/cuenta_1 (XLXI_4/cuenta_1)
+     LUT3:I0->O            1   0.479   0.681  XLXI_4/FC1 (FC_OBUF)
+     OBUF:I->O                 4.909          FC_OBUF (FC)
+    ----------------------------------------
+    Total                      7.761ns (6.014ns logic, 1.747ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_27'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              6.314ns (Levels of Logic = 1)
+  Source:            XLXI_3/Yi_6 (FF)
+  Destination:       YUPA<6> (PAD)
+  Source Clock:      XLXN_27 rising
+
+  Data Path: XLXI_3/Yi_6 to YUPA<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              4   0.626   0.779  XLXI_3/Yi_6 (XLXI_3/Yi_6)
+     OBUFT:I->O                4.909          YUPA_6_OBUFT (YUPA<6>)
+    ----------------------------------------
+    Total                      6.314ns (5.535ns logic, 0.779ns route)
+                                       (87.7% logic, 12.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               6.528ns (Levels of Logic = 2)
+  Source:            OEUPA (PAD)
+  Destination:       YUPA<7> (PAD)
+
+  Data Path: OEUPA to YUPA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O           16   0.357   1.051  OEUPA_BUFGP (OEUPA_BUFGP)
+     OBUFT:T->O                5.120          YUPA_1_OBUFT (YUPA<1>)
+    ----------------------------------------
+    Total                      6.528ns (5.477ns logic, 1.051ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+CPU : 11.64 / 12.09 s | Elapsed : 12.00 / 12.00 s
+ 
+--> 
+
+Total memory usage is 133368 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

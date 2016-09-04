@@ -1,0 +1,15 @@
+[Inputs]
+clk
+NW
+E0
+E1
+=Ai[7:0]=
+=Bi[7:0]=
+=Ci[7:0]=
+[Outputs]
+Z
+N
+=Ao[7:0]=
+=Bo[7:0]=
+=Co[7:0]=
+[BiDir]

@@ -1,0 +1,7 @@
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.sch" UPA.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.sch" UPA.vf
+xst -ise "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.ise" -intstyle ise -ifn UPA.xst -ofn UPA.syr
+xst -ise "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.ise" -intstyle ise -ifn UPA.xst -ofn UPA.syr
+xst -ise "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.ise" -intstyle ise -ifn UPA.xst -ofn UPA.syr
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.sch" UPA.vf
+xst -ise "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.ise" -intstyle ise -ifn UPA.xst -ofn UPA.syr

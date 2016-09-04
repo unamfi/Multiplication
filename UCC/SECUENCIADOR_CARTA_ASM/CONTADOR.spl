@@ -1,0 +1,7 @@
+[Inputs]
+RESET
+INC
+CLK
+[Outputs]
+FC
+[BiDir]

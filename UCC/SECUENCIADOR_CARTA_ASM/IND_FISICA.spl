@@ -1,0 +1,6 @@
+[Inputs]
+=YUPA[7:0]=
+[Outputs]
+=A[7:0]=
+=B[7:0]=
+[BiDir]

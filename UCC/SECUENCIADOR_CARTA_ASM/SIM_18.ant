@@ -1,0 +1,437 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : SIM_18.ant
+// /___/   /\     Timestamp : Thu Oct 25 04:25:03 2012
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: SIM_18
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module SIM_18;
+    reg Cin = 1'b0;
+    reg clk = 1'b0;
+    reg [7:0] D = 8'b00000000;
+    reg [7:0] DATO_A = 8'b00000011;
+    reg [7:0] DATO_B = 8'b00000011;
+    reg reset = 1'b0;
+    wire [7:0] Ao_A;
+    wire [7:0] Ao_B;
+    wire [7:0] Bo_A;
+    wire [7:0] Bo_B;
+    wire C;
+    wire [7:0] Co_A;
+    wire [7:0] Co_B;
+    wire DUPA;
+    wire EA0;
+    wire EA1;
+    wire EB0;
+    wire EB1;
+    wire FC;
+    wire [7:0] Fupa;
+    wire HBA;
+    wire HBB;
+    wire NA;
+    wire NB;
+    wire OEUPA;
+    wire [7:0] Qupa;
+    wire Q0;
+    wire [9:7] UPAH;
+    wire [3:0] UPAL;
+    wire [6:4] UPAM;
+    wire WA;
+    wire WB;
+    wire Yo;
+    wire [7:0] YUPA;
+    wire ZA;
+    wire ZB;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    MULTIPLICACION UUT (
+        .Cin(Cin),
+        .clk(clk),
+        .D(D),
+        .DATO_A(DATO_A),
+        .DATO_B(DATO_B),
+        .reset(reset),
+        .Ao_A(Ao_A),
+        .Ao_B(Ao_B),
+        .Bo_A(Bo_A),
+        .Bo_B(Bo_B),
+        .C(C),
+        .Co_A(Co_A),
+        .Co_B(Co_B),
+        .DUPA(DUPA),
+        .EA0(EA0),
+        .EA1(EA1),
+        .EB0(EB0),
+        .EB1(EB1),
+        .FC(FC),
+        .Fupa(Fupa),
+        .HBA(HBA),
+        .HBB(HBB),
+        .NA(NA),
+        .NB(NB),
+        .OEUPA(OEUPA),
+        .Qupa(Qupa),
+        .Q0(Q0),
+        .UPAH(UPAH),
+        .UPAL(UPAL),
+        .UPAM(UPAM),
+        .WA(WA),
+        .WB(WB),
+        .Yo(Yo),
+        .YUPA(YUPA),
+        .ZA(ZA),
+        .ZB(ZB));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_Ao_A;
+        ANNOTATE_Ao_B;
+        ANNOTATE_Bo_A;
+        ANNOTATE_Bo_B;
+        ANNOTATE_C;
+        ANNOTATE_Co_A;
+        ANNOTATE_Co_B;
+        ANNOTATE_DUPA;
+        ANNOTATE_EA0;
+        ANNOTATE_EA1;
+        ANNOTATE_EB0;
+        ANNOTATE_EB1;
+        ANNOTATE_FC;
+        ANNOTATE_Fupa;
+        ANNOTATE_HBA;
+        ANNOTATE_HBB;
+        ANNOTATE_NA;
+        ANNOTATE_NB;
+        ANNOTATE_OEUPA;
+        ANNOTATE_Qupa;
+        ANNOTATE_Q0;
+        ANNOTATE_UPAH;
+        ANNOTATE_UPAL;
+        ANNOTATE_UPAM;
+        ANNOTATE_WA;
+        ANNOTATE_WB;
+        ANNOTATE_Yo;
+        ANNOTATE_YUPA;
+        ANNOTATE_ZA;
+        ANNOTATE_ZB;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_Ao_A;
+            ANNOTATE_Ao_B;
+            ANNOTATE_Bo_A;
+            ANNOTATE_Bo_B;
+            ANNOTATE_C;
+            ANNOTATE_Co_A;
+            ANNOTATE_Co_B;
+            ANNOTATE_DUPA;
+            ANNOTATE_EA0;
+            ANNOTATE_EA1;
+            ANNOTATE_EB0;
+            ANNOTATE_EB1;
+            ANNOTATE_FC;
+            ANNOTATE_Fupa;
+            ANNOTATE_HBA;
+            ANNOTATE_HBB;
+            ANNOTATE_NA;
+            ANNOTATE_NB;
+            ANNOTATE_OEUPA;
+            ANNOTATE_Qupa;
+            ANNOTATE_Q0;
+            ANNOTATE_UPAH;
+            ANNOTATE_UPAL;
+            ANNOTATE_UPAM;
+            ANNOTATE_WA;
+            ANNOTATE_WB;
+            ANNOTATE_Yo;
+            ANNOTATE_YUPA;
+            ANNOTATE_ZA;
+            ANNOTATE_ZB;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Documents and Settings\\CARLOS\\Desktop\\ALGORITMO_MULTIPLICACION\\UCC\\SECUENCIADOR_CARTA_ASM\\SIM_18.ano");
+        #100200 // Final time:  100200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+    end
+
+    task ANNOTATE_Ao_A;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Ao_A,%b]", $time, Ao_A);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Ao_B;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Ao_B,%b]", $time, Ao_B);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Bo_A;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Bo_A,%b]", $time, Bo_A);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Bo_B;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Bo_B,%b]", $time, Bo_B);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_C;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,C,%b]", $time, C);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Co_A;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Co_A,%b]", $time, Co_A);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Co_B;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Co_B,%b]", $time, Co_B);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_DUPA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,DUPA,%b]", $time, DUPA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EA0;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EA0,%b]", $time, EA0);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EA1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EA1,%b]", $time, EA1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EB0;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EB0,%b]", $time, EB0);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EB1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EB1,%b]", $time, EB1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_FC;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,FC,%b]", $time, FC);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Fupa;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Fupa,%b]", $time, Fupa);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_HBA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,HBA,%b]", $time, HBA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_HBB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,HBB,%b]", $time, HBB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_NA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,NA,%b]", $time, NA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_NB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,NB,%b]", $time, NB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_OEUPA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,OEUPA,%b]", $time, OEUPA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Qupa;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Qupa,%b]", $time, Qupa);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q0;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q0,%b]", $time, Q0);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_UPAH;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,UPAH,%b]", $time, UPAH);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_UPAL;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,UPAL,%b]", $time, UPAL);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_UPAM;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,UPAM,%b]", $time, UPAM);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_WA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,WA,%b]", $time, WA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_WB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,WB,%b]", $time, WB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Yo;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Yo,%b]", $time, Yo);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_YUPA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,YUPA,%b]", $time, YUPA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_ZA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,ZA,%b]", $time, ZA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_ZB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,ZB,%b]", $time, ZB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

@@ -1,0 +1,616 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : SIM_V51.tfw
+// /___/   /\     Timestamp : Mon Oct 29 10:02:05 2012
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: SIM_V51
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module SIM_V51;
+    reg Cin = 1'b0;
+    reg [7:0] Ci_Acc = 8'b00000000;
+    reg [7:0] DATO_A = 8'b00100001;
+    reg [7:0] DATO_B = 8'b00100001;
+    reg [7:0] D_upa = 8'b00000000;
+    reg reloj = 1'b0;
+    reg reset = 1'b0;
+    wire [7:0] Ao_A;
+    wire [7:0] Ao_B;
+    wire [7:0] Bo_A;
+    wire [7:0] Bo_B;
+    wire Cout;
+    wire [7:0] Co_A;
+    wire [7:0] Co_B;
+    wire NA;
+    wire NB;
+    wire ZA;
+    wire ZB;
+
+
+    UCC_TRANS UUT (
+        .Cin(Cin),
+        .Ci_Acc(Ci_Acc),
+        .DATO_A(DATO_A),
+        .DATO_B(DATO_B),
+        .D_upa(D_upa),
+        .reloj(reloj),
+        .reset(reset),
+        .Ao_A(Ao_A),
+        .Ao_B(Ao_B),
+        .Bo_A(Bo_A),
+        .Bo_B(Bo_B),
+        .Cout(Cout),
+        .Co_A(Co_A),
+        .Co_B(Co_B),
+        .NA(NA),
+        .NB(NB),
+        .ZA(ZA),
+        .ZB(ZB));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin  // Open the results file...
+        TX_FILE = $fopen("results.txt");
+        #10000 // Final time:  10000 ns
+        if (TX_ERROR == 0) begin
+            $display("No errors or warnings.");
+            $fdisplay(TX_FILE, "No errors or warnings.");
+        end else begin
+            $display("%d errors found in simulation.", TX_ERROR);
+            $fdisplay(TX_FILE, "%d errors found in simulation.", TX_ERROR);
+        end
+        $fclose(TX_FILE);
+        $stop;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  8800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  8900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9000ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9100ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9200ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9300ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9400ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9500ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9600ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9700ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  9800ns
+        #100;
+        reloj = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  9900ns
+        #100;
+        reloj = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  10000ns
+        #100;
+        Cin = 1'b0;
+        reloj = 1'b0;
+    end
+
+    task CHECK_Ao_A;
+        input [7:0] NEXT_Ao_A;
+
+        #0 begin
+            if (NEXT_Ao_A !== Ao_A) begin
+                $display("Error at time=%dns Ao_A=%b, expected=%b", $time, Ao_A, NEXT_Ao_A);
+                $fdisplay(TX_FILE, "Error at time=%dns Ao_A=%b, expected=%b", $time, Ao_A, NEXT_Ao_A);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_Ao_B;
+        input [7:0] NEXT_Ao_B;
+
+        #0 begin
+            if (NEXT_Ao_B !== Ao_B) begin
+                $display("Error at time=%dns Ao_B=%b, expected=%b", $time, Ao_B, NEXT_Ao_B);
+                $fdisplay(TX_FILE, "Error at time=%dns Ao_B=%b, expected=%b", $time, Ao_B, NEXT_Ao_B);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_Bo_A;
+        input [7:0] NEXT_Bo_A;
+
+        #0 begin
+            if (NEXT_Bo_A !== Bo_A) begin
+                $display("Error at time=%dns Bo_A=%b, expected=%b", $time, Bo_A, NEXT_Bo_A);
+                $fdisplay(TX_FILE, "Error at time=%dns Bo_A=%b, expected=%b", $time, Bo_A, NEXT_Bo_A);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_Bo_B;
+        input [7:0] NEXT_Bo_B;
+
+        #0 begin
+            if (NEXT_Bo_B !== Bo_B) begin
+                $display("Error at time=%dns Bo_B=%b, expected=%b", $time, Bo_B, NEXT_Bo_B);
+                $fdisplay(TX_FILE, "Error at time=%dns Bo_B=%b, expected=%b", $time, Bo_B, NEXT_Bo_B);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_Cout;
+        input NEXT_Cout;
+
+        #0 begin
+            if (NEXT_Cout !== Cout) begin
+                $display("Error at time=%dns Cout=%b, expected=%b", $time, Cout, NEXT_Cout);
+                $fdisplay(TX_FILE, "Error at time=%dns Cout=%b, expected=%b", $time, Cout, NEXT_Cout);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_Co_A;
+        input [7:0] NEXT_Co_A;
+
+        #0 begin
+            if (NEXT_Co_A !== Co_A) begin
+                $display("Error at time=%dns Co_A=%b, expected=%b", $time, Co_A, NEXT_Co_A);
+                $fdisplay(TX_FILE, "Error at time=%dns Co_A=%b, expected=%b", $time, Co_A, NEXT_Co_A);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_Co_B;
+        input [7:0] NEXT_Co_B;
+
+        #0 begin
+            if (NEXT_Co_B !== Co_B) begin
+                $display("Error at time=%dns Co_B=%b, expected=%b", $time, Co_B, NEXT_Co_B);
+                $fdisplay(TX_FILE, "Error at time=%dns Co_B=%b, expected=%b", $time, Co_B, NEXT_Co_B);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_NA;
+        input NEXT_NA;
+
+        #0 begin
+            if (NEXT_NA !== NA) begin
+                $display("Error at time=%dns NA=%b, expected=%b", $time, NA, NEXT_NA);
+                $fdisplay(TX_FILE, "Error at time=%dns NA=%b, expected=%b", $time, NA, NEXT_NA);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_NB;
+        input NEXT_NB;
+
+        #0 begin
+            if (NEXT_NB !== NB) begin
+                $display("Error at time=%dns NB=%b, expected=%b", $time, NB, NEXT_NB);
+                $fdisplay(TX_FILE, "Error at time=%dns NB=%b, expected=%b", $time, NB, NEXT_NB);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_ZA;
+        input NEXT_ZA;
+
+        #0 begin
+            if (NEXT_ZA !== ZA) begin
+                $display("Error at time=%dns ZA=%b, expected=%b", $time, ZA, NEXT_ZA);
+                $fdisplay(TX_FILE, "Error at time=%dns ZA=%b, expected=%b", $time, ZA, NEXT_ZA);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_ZB;
+        input NEXT_ZB;
+
+        #0 begin
+            if (NEXT_ZB !== ZB) begin
+                $display("Error at time=%dns ZB=%b, expected=%b", $time, ZB, NEXT_ZB);
+                $fdisplay(TX_FILE, "Error at time=%dns ZB=%b, expected=%b", $time, ZB, NEXT_ZB);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+
+endmodule
+

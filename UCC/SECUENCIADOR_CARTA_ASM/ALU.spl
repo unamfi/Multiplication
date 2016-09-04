@@ -1,0 +1,13 @@
+[Inputs]
+Cin
+=UPA[6:4]=
+=R[7:0]=
+=S[7:0]=
+[Outputs]
+H
+Z
+N
+C
+V
+=F[7:0]=
+[BiDir]

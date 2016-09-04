@@ -1,0 +1,11 @@
+AR alu behavioral "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/ALU.vhd" sub00/vhpl03 1350740052
+AR upa_in behavioral "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.vhd" sub00/vhpl01 1350725173
+EN upa_out NULL "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA_OUT.vhd" sub00/vhpl04 1350740057
+MO UPA NULL UPA.vf vlg1E/_u_p_a.bin 1350740051
+EN upa_in NULL "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.vhd" sub00/vhpl00 1350725172
+AR reg_flags behavioral "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/REG_FLAGS.vhd" sub00/vhpl09 1350740056
+AR upa_out behavioral "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA_OUT.vhd" sub00/vhpl05 1350740058
+EN contador NULL "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/CONTADOR.vhd" sub00/vhpl06 1350740053
+AR contador behavioral "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/CONTADOR.vhd" sub00/vhpl07 1350740054
+EN reg_flags NULL "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/REG_FLAGS.vhd" sub00/vhpl08 1350740055
+EN alu NULL "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/ALU.vhd" sub00/vhpl02 1350740051

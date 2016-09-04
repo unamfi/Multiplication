@@ -1,0 +1,2 @@
+vhdl work "ACC.vhd"
+verilog work "INTERACCION_ACC.vf"

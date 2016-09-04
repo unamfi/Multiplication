@@ -1,0 +1,4 @@
+set -tmpdir "./xst/projnav.tmp"
+elaborate
+-ifn REG_FLAGS.prj
+-ifmt mixed

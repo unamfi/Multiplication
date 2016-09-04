@@ -1,0 +1,205 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : SIM_MULT.ant
+// /___/   /\     Timestamp : Sat Oct 20 20:42:21 2012
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: SIM_MULT
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module SIM_MULT;
+    reg AUX = 1'b0;
+    reg [7:0] BA = 8'b00000000;
+    reg [7:0] BB = 8'b00000000;
+    reg Cin = 1'b0;
+    reg clk = 1'b0;
+    reg [7:0] D = 8'b00000000;
+    reg I = 1'b0;
+    reg [3:0] INT = 4'b0000;
+    reg RESET = 1'b0;
+    reg [3:0] TRANS = 4'b0000;
+    wire [7:0] AccA;
+    wire [7:0] AccB;
+    wire H;
+    wire N;
+    wire NA;
+    wire NB;
+    wire V;
+    wire Y7OUT;
+    wire Z;
+    wire ZA;
+    wire ZB;
+
+
+    MULTIPLICACION UUT (
+        .AUX(AUX),
+        .BA(BA),
+        .BB(BB),
+        .Cin(Cin),
+        .clk(clk),
+        .D(D),
+        .I(I),
+        .INT(INT),
+        .RESET(RESET),
+        .TRANS(TRANS),
+        .AccA(AccA),
+        .AccB(AccB),
+        .H(H),
+        .N(N),
+        .NA(NA),
+        .NB(NB),
+        .V(V),
+        .Y7OUT(Y7OUT),
+        .Z(Z),
+        .ZA(ZA),
+        .ZB(ZB));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_AccA;
+        ANNOTATE_AccB;
+        ANNOTATE_H;
+        ANNOTATE_N;
+        ANNOTATE_NA;
+        ANNOTATE_NB;
+        ANNOTATE_V;
+        ANNOTATE_Y7OUT;
+        ANNOTATE_Z;
+        ANNOTATE_ZA;
+        ANNOTATE_ZB;
+        forever begin
+            #50;
+            ANNOTATE_AccA;
+            ANNOTATE_AccB;
+            ANNOTATE_H;
+            ANNOTATE_N;
+            ANNOTATE_NA;
+            ANNOTATE_NB;
+            ANNOTATE_V;
+            ANNOTATE_Y7OUT;
+            ANNOTATE_Z;
+            ANNOTATE_ZA;
+            ANNOTATE_ZB;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Documents and Settings\\CARLOS\\Desktop\\ALGORITMO_MULTIPLICACION\\UCC\\SECUENCIADOR_CARTA_ASM\\SIM_MULT.ano");
+        #10000 // Final time:  10000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  10000ns
+        #10000;
+        AUX = 1'b0;
+    end
+
+    task ANNOTATE_AccA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,AccA,%b]", $time, AccA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_AccB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,AccB,%b]", $time, AccB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_H;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,H,%b]", $time, H);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_N;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,N,%b]", $time, N);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_NA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,NA,%b]", $time, NA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_NB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,NB,%b]", $time, NB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_V;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,V,%b]", $time, V);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Y7OUT;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Y7OUT,%b]", $time, Y7OUT);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Z;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Z,%b]", $time, Z);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_ZA;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,ZA,%b]", $time, ZA);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_ZB;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,ZB,%b]", $time, ZB);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

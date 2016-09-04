@@ -1,0 +1,121 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : ArquitecturaCompuesta.vf
+// /___/   /\     Timestamp : 10/26/2012 13:18:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w "C:/Documents and Settings/CARLOS/Desktop/ESCUELA/SEPTIMO SEMESTRE/ARQUITECTURA DE COMPUTADORAS/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/ArquitecturaCompuesta.sch" ArquitecturaCompuesta.vf
+//Design Name: ArquitecturaCompuesta
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ArquitecturaCompuesta(AUX, 
+                             FC, 
+                             I, 
+                             INT, 
+                             Q0, 
+                             reloj, 
+                             Reset, 
+                             TRANS, 
+                             DUPA, 
+                             EOB, 
+                             E0A, 
+                             E1A, 
+                             E1B, 
+                             HBA, 
+                             HBB, 
+                             OEUPA, 
+                             UPAH, 
+                             UPAL, 
+                             UPAM, 
+                             WA, 
+                             WB);
+
+    input AUX;
+    input FC;
+    input I;
+    input [3:0] INT;
+    input Q0;
+    input reloj;
+    input Reset;
+    input [3:0] TRANS;
+   output DUPA;
+   output EOB;
+   output E0A;
+   output E1A;
+   output E1B;
+   output HBA;
+   output HBB;
+   output OEUPA;
+   output [9:7] UPAH;
+   output [3:0] UPAL;
+   output [6:4] UPAM;
+   output WA;
+   output WB;
+   
+   wire XLXN_37;
+   wire XLXN_47;
+   wire [1:0] XLXN_63;
+   wire [2:0] XLXN_64;
+   wire XLXN_79;
+   wire XLXN_107;
+   wire XLXN_108;
+   wire [3:0] XLXN_111;
+   wire [3:0] XLXN_115;
+   wire [3:0] XLXN_125;
+   
+   REG_3ER_ESTADO XLXI_3 (.Hab(XLXN_107), 
+                          .INR(INT[3:0]), 
+                          .OUTR(XLXN_125[3:0]));
+   Logica XLXI_4 (.MI(XLXN_64[2:0]), 
+                  .Qsel(XLXN_47), 
+                  .MAPS(XLXN_79), 
+                  .MPC(XLXN_108), 
+                  .PL(XLXN_37), 
+                  .VECT(XLXN_107));
+   Secuenciador XLXI_6 (.clk(reloj), 
+                        .INREG(XLXN_125[3:0]), 
+                        .MPC(XLXN_108), 
+                        .reset(Reset), 
+                        .EDO_PRESENTE(XLXN_111[3:0]));
+   REG_3ER_ESTADO XLXI_9 (.Hab(XLXN_37), 
+                          .INR(XLXN_115[3:0]), 
+                          .OUTR(XLXN_125[3:0]));
+   MUX_4_1 XLXI_11 (.I00(AUX), 
+                    .I01(I), 
+                    .I10(FC), 
+                    .I11(Q0), 
+                    .Prueba(XLXN_63[1:0]), 
+                    .Qsel(XLXN_47));
+   Memoria XLXI_15 (.EDO_PRESENTE(XLXN_111[3:0]), 
+                    .DUPA(DUPA), 
+                    .E0A(E0A), 
+                    .E0B(EOB), 
+                    .E1A(E1A), 
+                    .E1B(E1B), 
+                    .HBA(HBA), 
+                    .HBB(HBB), 
+                    .Liga(XLXN_115[3:0]), 
+                    .MI(XLXN_64[2:0]), 
+                    .OEUPA(OEUPA), 
+                    .Prueba(XLXN_63[1:0]), 
+                    .UPAH(UPAH[9:7]), 
+                    .UPAL(UPAL[3:0]), 
+                    .UPAM(UPAM[6:4]), 
+                    .WA(WA), 
+                    .WB(WB));
+   REG_3ER_ESTADO XLXI_18 (.Hab(XLXN_79), 
+                           .INR(TRANS[3:0]), 
+                           .OUTR(XLXN_125[3:0]));
+endmodule

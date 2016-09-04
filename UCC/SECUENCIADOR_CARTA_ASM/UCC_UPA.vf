@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : UCC_UPA.vf
+// /___/   /\     Timestamp : 10/25/2012 14:45:00
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UCC_UPA.sch" UCC_UPA.vf
+//Design Name: UCC_UPA
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module UCC_UPA();
+
+   
+   
+   ArquitecturaCompuesta XLXI_1 (.AUX(), 
+                                 .FC(), 
+                                 .I(), 
+                                 .INT(), 
+                                 .Q0(), 
+                                 .reloj(), 
+                                 .Reset(), 
+                                 .TRANS(), 
+                                 .DUPA(), 
+                                 .EOB(), 
+                                 .E0A(), 
+                                 .E1A(), 
+                                 .E1B(), 
+                                 .HBA(), 
+                                 .HBB(), 
+                                 .OEUPA(), 
+                                 .UPAH(), 
+                                 .UPAL(), 
+                                 .UPAM(), 
+                                 .WA(), 
+                                 .WB());
+endmodule

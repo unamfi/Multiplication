@@ -1,0 +1,114 @@
+ command line:
+   ./SIM_V51_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1036
+
+Mon Oct 29 10:02:27 2012
+
+WARNING:Simulator:434 - Module TRANSEIVER does not have a `timescale directive
+   but previous modules do.
+WARNING:Simulator:12 - Port Fupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port H of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port N of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Qupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Q7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port V of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Y7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Z of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port INT of module ArquitecturaCompuesta in instance
+   /SIM_V51/UUT/XLXI_1/XLXI_1/ is left unconnected.
+WARNING:Simulator:12 - Port TRANS of module ArquitecturaCompuesta in instance
+   /SIM_V51/UUT/XLXI_1/XLXI_1/ is left unconnected.
+WARNING:Simulator:12 - Port Fupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port H of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port N of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Qupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Q7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port V of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Y7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Z of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Fupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port H of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port N of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Qupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Q7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port V of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Y7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Z of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Fupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port H of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port N of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Qupa of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Q7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port V of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+WARNING:Simulator:12 - Port Y7OUT of module UPA in instance /SIM_V51/UUT/XLXI_4/
+   is left unconnected.
+WARNING:Simulator:12 - Port Z of module UPA in instance /SIM_V51/UUT/XLXI_4/ is
+   left unconnected.
+Total Line Count = 1488
+
+ Elaboration time 0.03125 sec.
+
+ Estimate current memory usage 37.6668 Meg. 
+
+ Total signals 287
+ Total nets 648
+ Total signal drivers 204
+ Total blocks 41
+ Total primitive blocks 33
+ Total processes 207
+ntrace select -o on -n /SIM_V51/Ao_A 
+ntrace select -o on -n /SIM_V51/Ao_B 
+ntrace select -o on -n /SIM_V51/NA 
+ntrace select -o on -n /SIM_V51/NB 
+ntrace select -o on -n /SIM_V51/Cout 
+ntrace select -o on -n /SIM_V51/Co_A 
+ntrace select -o on -n /SIM_V51/Co_B 
+ntrace select -o on -n /SIM_V51/ZA 
+ntrace select -o on -n /SIM_V51/ZB 
+ntrace select -o on -n /SIM_V51/Bo_A 
+ntrace select -o on -n /SIM_V51/Bo_B 
+ntrace select -o on -n /SIM_V51/reloj 
+ntrace select -o on -n /SIM_V51/D_upa 
+ntrace select -o on -n /SIM_V51/reset 
+ntrace select -o on -n /SIM_V51/Ci_Acc 
+ntrace select -o on -n /SIM_V51/DATO_A 
+ntrace select -o on -n /SIM_V51/Cin 
+ntrace select -o on -n /SIM_V51/DATO_B 
+ntrace select -o on -n /SIM_V51/TX_FILE 
+ntrace select -o on -n /SIM_V51/TX_ERROR 
+ntrace start 
+run all 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

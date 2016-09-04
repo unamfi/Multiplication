@@ -1,0 +1,95 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : MULTIPLICACION.vf
+// /___/   /\     Timestamp : 10/25/2012 23:15:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w "C:/Documents and Settings/CARLOS/Desktop/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/MULTIPLICACION.sch" MULTIPLICACION.vf
+//Design Name: MULTIPLICACION
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MULTIPLICACION(clk, 
+                      DATO_A, 
+                      DATO_B, 
+                      Fc, 
+                      Qo, 
+                      reset, 
+                      BUS_A, 
+                      BUS_B, 
+                      DUPA, 
+                      EA0, 
+                      EA1, 
+                      EB0, 
+                      EB1, 
+                      OEUPA, 
+                      UPAH, 
+                      UPAL, 
+                      UPAM, 
+                      WA, 
+                      WB);
+
+    input clk;
+    input [7:0] DATO_A;
+    input [7:0] DATO_B;
+    input Fc;
+    input Qo;
+    input reset;
+   output [7:0] BUS_A;
+   output [7:0] BUS_B;
+   output DUPA;
+   output EA0;
+   output EA1;
+   output EB0;
+   output EB1;
+   output OEUPA;
+   output [9:7] UPAH;
+   output [3:0] UPAL;
+   output [6:4] UPAM;
+   output WA;
+   output WB;
+   
+   wire XLXN_134;
+   wire XLXN_140;
+   wire XLXN_141;
+   
+   ArquitecturaCompuesta XLXI_1 (.AUX(XLXN_134), 
+                                 .FC(Fc), 
+                                 .I(XLXN_134), 
+                                 .INT(), 
+                                 .Q0(Qo), 
+                                 .reloj(clk), 
+                                 .Reset(reset), 
+                                 .TRANS(), 
+                                 .DUPA(DUPA), 
+                                 .EOB(EB0), 
+                                 .E0A(EA0), 
+                                 .E1A(EA1), 
+                                 .E1B(EB1), 
+                                 .HBA(XLXN_140), 
+                                 .HBB(XLXN_141), 
+                                 .OEUPA(OEUPA), 
+                                 .UPAH(UPAH[9:7]), 
+                                 .UPAL(UPAL[3:0]), 
+                                 .UPAM(UPAM[6:4]), 
+                                 .WA(WA), 
+                                 .WB(WB));
+   GND XLXI_18 (.G(XLXN_134));
+   TRANSEIVER XLXI_19 (.Hab(XLXN_140), 
+                       .INR(DATO_A[7:0]), 
+                       .OUTR(BUS_A[7:0]));
+   TRANSEIVER XLXI_20 (.Hab(XLXN_141), 
+                       .INR(DATO_B[7:0]), 
+                       .OUTR(BUS_B[7:0]));
+endmodule

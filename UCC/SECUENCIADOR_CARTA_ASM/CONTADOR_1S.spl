@@ -1,0 +1,5 @@
+[Inputs]
+reloj
+[Outputs]
+clock
+[BiDir]

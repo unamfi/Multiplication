@@ -1,0 +1,20 @@
+add instance UPA 32 1664 R0 -sn=1
+add instance UPA 976 1680 R0 -sn=1
+select figure at 109 542 24 -branches -sn=1
+select all in -2147483648 -2147483648 2147483647 2147483647 -sn=1
+select figure at 655 1153 15 -branches -sn=1
+select figure at 651 1149 15 -branches -sn=1
+undo
+select figure at 655 1153 15 -branches -sn=1
+select figure at 651 1149 15 -branches -sn=1
+undo
+select figure at 103 993 15 -branches -sn=1
+select figure at 99 989 15 -branches -sn=1
+delete selection -sn=1
+select figure at 1223 1454 15 -branches -sn=1
+select figure at 1219 1450 15 -branches -sn=1
+delete selection -sn=1
+add instance UPA 3024 944 R0 -sn=1
+select figure at 3139 766 12 -branches -sn=1
+select figure at 3136 763 12 -branches -sn=1
+delete selection -sn=1

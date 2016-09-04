@@ -1,0 +1,9 @@
+[Inputs]
+Hab
+=INR[3:0]=
+[Outputs]
+=OUTR[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel REG_3ER_ESTADO
+

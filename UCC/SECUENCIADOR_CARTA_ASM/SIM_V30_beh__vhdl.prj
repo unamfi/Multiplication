@@ -1,0 +1,12 @@
+--VHDL project file split out from SIM_V30_beh.prj
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/Secuenciador.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/Memoria.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/MUX_4_1.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/Logica.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/UPA_OUT.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/UPA_IN.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/REG_FLAGS.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/CONTADOR.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/ALU.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/IND_FISICA.vhd"
+vhdl work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/ACC.vhd"

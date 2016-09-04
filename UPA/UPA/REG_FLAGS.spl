@@ -1,0 +1,14 @@
+[Inputs]
+C
+N
+V
+Z
+H
+clk
+[Outputs]
+CO
+NO
+VO
+ZO
+H0
+[BiDir]

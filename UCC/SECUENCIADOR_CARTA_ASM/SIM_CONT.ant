@@ -1,0 +1,502 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2003 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 8.2i
+--  \   \         Application : ISE
+--  /   /         Filename : SIM_CONT.ant
+-- /___/   /\     Timestamp : Wed Oct 24 17:24:18 2012
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: SIM_CONT
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY SIM_CONT IS
+END SIM_CONT;
+
+ARCHITECTURE testbench_arch OF SIM_CONT IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM\SIM_CONT.ano";
+
+    COMPONENT CONTADOR
+        PORT (
+            RESET : In std_logic;
+            INC : In std_logic;
+            CLK : In std_logic;
+            FC : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL RESET : std_logic := '0';
+    SIGNAL INC : std_logic := '1';
+    SIGNAL CLK : std_logic := '0';
+    SIGNAL FC : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    BEGIN
+        UUT : CONTADOR
+        PORT MAP (
+            RESET => RESET,
+            INC => INC,
+            CLK => CLK,
+            FC => FC
+        );
+
+        PROCESS    -- Annotation process
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_FC(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", FC, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, FC);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_FC(0);
+            ANNO_LOOP : LOOP
+                WAIT for 50 ns;
+                TX_TIME := TX_TIME + 50;
+                ANNOTATE_FC(TX_TIME);
+                WAIT for 50 ns;
+                TX_TIME := TX_TIME + 50;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  500ns
+                WAIT FOR 100 ns;
+                RESET <= '1';
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  600ns
+                WAIT FOR 100 ns;
+                RESET <= '0';
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2000ns
+                WAIT FOR 100 ns;
+                INC <= '0';
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  3800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  3900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  4100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  4300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  4500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  4700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  4800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  4900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  5000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  5100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  5200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  5300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  5400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  5500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  5600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  5700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  5800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  5900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  6000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  6100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  6200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  6300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  6400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  6500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  6600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  6700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  6800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  6900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  7000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  7100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  7200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  7300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  7400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  7500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  7600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  7700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  7800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  7900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  8000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  8100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  8200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  8300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  8400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  8500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  8600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  8700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  8800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  8900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  9000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  9100ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  9200ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  9300ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  9400ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  9500ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  9600ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  9700ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  9800ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  9900ns
+                WAIT FOR 100 ns;
+                CLK <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  10000ns
+                WAIT FOR 100 ns;
+                CLK <= '0';
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

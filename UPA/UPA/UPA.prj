@@ -1,0 +1,5 @@
+vhdl work "UPA_OUT.vhd"
+vhdl work "REG_FLAGS.vhd"
+vhdl work "CONTADOR.vhd"
+vhdl work "ALU.vhd"
+verilog work "UPA.vf"

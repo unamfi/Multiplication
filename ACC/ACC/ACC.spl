@@ -1,0 +1,12 @@
+[Inputs]
+NW
+E0
+E1
+clk
+[Outputs]
+Z
+N
+[BiDir]
+=A[7:0]=
+=B[7:0]=
+=C[7:0]=

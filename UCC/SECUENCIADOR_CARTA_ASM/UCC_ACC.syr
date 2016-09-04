@@ -1,0 +1,481 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.13 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.14 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: UCC_ACC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "UCC_ACC.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "UCC_ACC"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : UCC_ACC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : UCC_ACC.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/ACC.vhd" in Library work.
+Architecture behavioral of Entity acc is up to date.
+Compiling vhdl file "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Logica.vhd" in Library work.
+Architecture behavioral of Entity logica is up to date.
+Compiling vhdl file "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/MUX_4_1.vhd" in Library work.
+Architecture behavioral of Entity mux_4_1 is up to date.
+Compiling vhdl file "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Memoria.vhd" in Library work.
+Architecture behavioral of Entity memoria is up to date.
+Compiling vhdl file "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Secuenciador.vhd" in Library work.
+Architecture behavioral of Entity secuenciador is up to date.
+Compiling verilog file "REG_3ER_ESTADO.v" in library work
+Compiling verilog file "TRANSEIVER.v" in library work
+Module <REG_3ER_ESTADO> compiled
+Compiling verilog file "ArquitecturaCompuesta.vf" in library work
+Module <TRANSEIVER> compiled
+Compiling verilog file "UCC_ACC.vf" in library work
+Module <ArquitecturaCompuesta> compiled
+Module <UCC_ACC> compiled
+No errors in compilation
+Analysis of file <"UCC_ACC.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <UCC_ACC> in library <work>.
+
+Analyzing hierarchy for module <ArquitecturaCompuesta> in library <work>.
+
+Analyzing hierarchy for entity <acc> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <TRANSEIVER> in library <work>.
+
+Analyzing hierarchy for module <REG_3ER_ESTADO> in library <work>.
+
+Analyzing hierarchy for entity <logica> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <secuenciador> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux_4_1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <memoria> in library <work> (architecture <behavioral>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <UCC_ACC>.
+WARNING:Xst:852 - "UCC_ACC.vf" line 83: Unconnected input port 'INT' of instance 'XLXI_1' is tied to GND.
+WARNING:Xst:852 - "UCC_ACC.vf" line 83: Unconnected input port 'TRANS' of instance 'XLXI_1' is tied to GND.
+Module <UCC_ACC> is correct for synthesis.
+ 
+Analyzing module <ArquitecturaCompuesta> in library <work>.
+Module <ArquitecturaCompuesta> is correct for synthesis.
+ 
+Analyzing module <REG_3ER_ESTADO> in library <work>.
+Module <REG_3ER_ESTADO> is correct for synthesis.
+ 
+Analyzing Entity <logica> in library <work> (Architecture <behavioral>).
+Entity <logica> analyzed. Unit <logica> generated.
+
+Analyzing Entity <secuenciador> in library <work> (Architecture <behavioral>).
+Entity <secuenciador> analyzed. Unit <secuenciador> generated.
+
+Analyzing Entity <mux_4_1> in library <work> (Architecture <behavioral>).
+Entity <mux_4_1> analyzed. Unit <mux_4_1> generated.
+
+Analyzing Entity <memoria> in library <work> (Architecture <behavioral>).
+Entity <memoria> analyzed. Unit <memoria> generated.
+
+Analyzing Entity <acc> in library <work> (Architecture <behavioral>).
+Entity <acc> analyzed. Unit <acc> generated.
+
+Analyzing module <TRANSEIVER> in library <work>.
+Module <TRANSEIVER> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <acc>.
+    Related source file is "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/ACC.vhd".
+WARNING:Xst:653 - Signal <LATCH_OUT> is used but never assigned. Tied to value 00000000.
+WARNING:Xst:646 - Signal <LATCH_IN> is assigned but never used.
+    Found 8-bit tristate buffer for signal <Ao>.
+    Found 8-bit tristate buffer for signal <Bo>.
+    Summary:
+	inferred  16 Tristate(s).
+Unit <acc> synthesized.
+
+
+Synthesizing Unit <TRANSEIVER>.
+    Related source file is "TRANSEIVER.v".
+    Found 8-bit tristate buffer for signal <rsalida>.
+    Summary:
+	inferred   8 Tristate(s).
+Unit <TRANSEIVER> synthesized.
+
+
+Synthesizing Unit <REG_3ER_ESTADO>.
+    Related source file is "REG_3ER_ESTADO.v".
+    Found 4-bit tristate buffer for signal <rsalida>.
+    Summary:
+	inferred   4 Tristate(s).
+Unit <REG_3ER_ESTADO> synthesized.
+
+
+Synthesizing Unit <logica>.
+    Related source file is "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Logica.vhd".
+    Found 4-bit 8-to-1 multiplexer for signal <TEMP>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <logica> synthesized.
+
+
+Synthesizing Unit <secuenciador>.
+    Related source file is "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Secuenciador.vhd".
+    Found 4-bit up counter for signal <TEMP>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <secuenciador> synthesized.
+
+
+Synthesizing Unit <mux_4_1>.
+    Related source file is "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/MUX_4_1.vhd".
+    Found 1-bit 4-to-1 multiplexer for signal <Qsel>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_4_1> synthesized.
+
+
+Synthesizing Unit <memoria>.
+    Related source file is "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/Memoria.vhd".
+WARNING:Xst:646 - Signal <TEMP<31:29>> is assigned but never used.
+    Found 16x32-bit ROM for signal <TEMP>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <memoria> synthesized.
+
+
+Synthesizing Unit <ArquitecturaCompuesta>.
+    Related source file is "ArquitecturaCompuesta.vf".
+Unit <ArquitecturaCompuesta> synthesized.
+
+
+Synthesizing Unit <UCC_ACC>.
+    Related source file is "UCC_ACC.vf".
+Unit <UCC_ACC> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 1
+# Tristates                                            : 9
+ 4-bit tristate buffer                                 : 3
+ 8-bit tristate buffer                                 : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+WARNING:Xst:1290 - Hierarchical block <XLXI_4> is unconnected in block <UCC_ACC>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <XLXI_5> is unconnected in block <UCC_ACC>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2040 - Unit UCC_ACC: 4 multi-source signals are replaced by logic (pull-up yes): XLXI_1/XLXN_125<0>, XLXI_1/XLXN_125<1>, XLXI_1/XLXN_125<2>, XLXI_1/XLXN_125<3>.
+
+Optimizing unit <UCC_ACC> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block UCC_ACC, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : UCC_ACC.ngr
+Top Level Output File Name         : UCC_ACC
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 100
+
+Cell Usage :
+# BELS                             : 26
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 17
+#      LUT4_D                      : 2
+#      LUT4_L                      : 2
+#      MUXF5                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 4
+#      FDR                         : 3
+#      FDRS                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 2
+#      OBUF                        : 32
+#      OBUFT                       : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                      12  out of   1920     0%  
+ Number of Slice Flip Flops:             4  out of   3840     0%  
+ Number of 4 input LUTs:                23  out of   3840     0%  
+ Number of IOs:                        100
+ Number of bonded IOBs:                 67  out of    173    38%  
+ Number of GCLKs:                        1  out of      8    12%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.049ns (Maximum Frequency: 165.323MHz)
+   Minimum input arrival time before clock: 5.089ns
+   Maximum output required time after clock: 8.287ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.049ns (frequency: 165.323MHz)
+  Total number of paths / destination ports: 68 / 5
+-------------------------------------------------------------------------
+Delay:               6.049ns (Levels of Logic = 3)
+  Source:            XLXI_1/XLXI_6/TEMP_2 (FF)
+  Destination:       XLXI_1/XLXI_6/TEMP_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_1/XLXI_6/TEMP_2 to XLXI_1/XLXI_6/TEMP_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             18   0.626   1.374  XLXI_1/XLXI_6/TEMP_2 (XLXI_1/XLXI_6/TEMP_2)
+     LUT4_D:I1->LO         1   0.479   0.270  XLXI_1/XLXI_15/Mrom_TEMP20 (N89)
+     LUT2:I1->O            2   0.479   0.768  XLXI_1/XLXN_4711 (XLXI_1/XLXN_47)
+     LUT4:I3->O            1   0.479   0.681  XLXI_1/XLXI_6/TEMP__mux0000<3>7 (XLXI_1/XLXI_6/TEMP__mux0000<3>_map89)
+     FDRS:S                    0.892          XLXI_1/XLXI_6/TEMP_3
+    ----------------------------------------
+    Total                      6.049ns (2.955ns logic, 3.094ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 10 / 9
+-------------------------------------------------------------------------
+Offset:              5.089ns (Levels of Logic = 3)
+  Source:            QO (PAD)
+  Destination:       XLXI_1/XLXI_6/TEMP_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: QO to XLXI_1/XLXI_6/TEMP_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.715   1.074  QO_IBUF (QO_IBUF)
+     LUT2:I0->O            2   0.479   0.768  XLXI_1/XLXN_4711 (XLXI_1/XLXN_47)
+     LUT4:I3->O            1   0.479   0.681  XLXI_1/XLXI_6/TEMP__mux0000<3>7 (XLXI_1/XLXI_6/TEMP__mux0000<3>_map89)
+     FDRS:S                    0.892          XLXI_1/XLXI_6/TEMP_3
+    ----------------------------------------
+    Total                      5.089ns (2.565ns logic, 2.524ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 44 / 11
+-------------------------------------------------------------------------
+Offset:              8.287ns (Levels of Logic = 2)
+  Source:            XLXI_1/XLXI_6/TEMP_0 (FF)
+  Destination:       UPA_M<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_1/XLXI_6/TEMP_0 to UPA_M<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             19   0.626   1.528  XLXI_1/XLXI_6/TEMP_0 (XLXI_1/XLXI_6/TEMP_0)
+     LUT4:I0->O            2   0.479   0.745  XLXI_1/XLXI_15/Mrom_TEMP6 (UPA_M_5_OBUF)
+     OBUF:I->O                 4.909          UPA_M_4_OBUF (UPA_M<4>)
+    ----------------------------------------
+    Total                      8.287ns (6.014ns logic, 2.273ns route)
+                                       (72.6% logic, 27.4% route)
+
+=========================================================================
+CPU : 5.44 / 5.59 s | Elapsed : 6.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 132800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

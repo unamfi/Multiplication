@@ -1,0 +1,9 @@
+AR sim testbench_arch "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM.vhw" sub00/vhpl03 1350714213
+EN sim NULL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM.vhw" sub00/vhpl02 1350714212
+EN sim_v2 NULL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM_V2.vhw" sub00/vhpl04 1350716432
+AR acc behavioral "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd" sub00/vhpl01 1350715215
+AR sim_v2 testbench_arch "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/SIM_V2.vhw" sub00/vhpl05 1350716433
+MO INTERACCION_ACC NULL "C:\Documents and Settings\CARLOS\Desktop\ACC\ACC/INTERACCION_ACC.vf" vlg35/_i_n_t_e_r_a_c_c_i_o_n___a_c_c.bin 1350716209
+EN acc NULL "C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd" sub00/vhpl00 1350715214
+MO INTERACCION NULL "C:\Documents and Settings\CARLOS\Desktop\ACC\ACC/INTERACCION.tfw" vlg57/_i_n_t_e_r_a_c_c_i_o_n.bin 1350716209
+MO glbl NULL C:/Xilinx/verilog/src/glbl.v vlg2D/glbl.bin 1350716211

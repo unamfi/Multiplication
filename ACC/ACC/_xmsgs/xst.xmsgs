@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/CARLOS/Desktop/ACC/ACC/ACC.vhd</arg>&quot; line <arg fmt="%d" index="2">25</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">NW, A, B, C</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">LATCH_IN</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="2042" delta="unknown" >Unit <arg fmt="%s" index="1">INTERACCION_ACC</arg>: <arg fmt="%d" index="2">16</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="warning" file="Xst" num="2040" delta="unknown" >Unit <arg fmt="%s" index="1">INTERACCION_ACC</arg>: <arg fmt="%d" index="2">16</arg> multi-source signals are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+</messages>

@@ -1,0 +1,33 @@
+ command line:
+   ./SIM_V2_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  6526
+
+Sat Oct 20 02:00:39 2012
+
+Total Line Count = 976
+
+ Elaboration time 0.015625 sec.
+
+ Estimate current memory usage 35.4345 Meg. 
+
+ Total signals 19
+ Total nets 38
+ Total signal drivers 11
+ Total blocks 7
+ Total primitive blocks 1
+ Total processes 7
+ntrace select -o on -n /SIM_V2/clk 
+ntrace select -o on -n /SIM_V2/nw 
+ntrace select -o on -n /SIM_V2/e0 
+ntrace select -o on -n /SIM_V2/e1 
+ntrace select -o on -n /SIM_V2/c 
+ntrace select -o on -n /SIM_V2/b 
+ntrace select -o on -n /SIM_V2/a 
+ntrace select -o on -n /SIM_V2/z 
+ntrace select -o on -n /SIM_V2/n 
+ntrace start 
+run all 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

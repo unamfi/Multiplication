@@ -1,0 +1,1 @@
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/CRuizA/Escritorio/ALGORITMO_MULTIPLICACION/UCC/SECUENCIADOR_CARTA_ASM/UCC_UPA.sch" UCC_UPA.vf

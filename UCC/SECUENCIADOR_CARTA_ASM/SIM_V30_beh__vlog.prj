@@ -1,0 +1,9 @@
+--Verilog project file split out from SIM_V30_beh.prj
+verilog work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/REG_3ER_ESTADO.v"
+verilog work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/TRANSEIVER.v"
+verilog work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/ArquitecturaCompuesta.vf"
+verilog work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/UPA.vf"
+verilog work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/MULTIPLICACION.vf"
+verilog work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/UCC_TRANS.vf"
+verilog work "C:\Documents and Settings\CARLOS\Desktop\ALGORITMO_MULTIPLICACION\UCC\SECUENCIADOR_CARTA_ASM/SIM_V30.tfw"
+verilog work "C:/Xilinx/verilog/src/glbl.v"

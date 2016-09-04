@@ -1,0 +1,141 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : UPA.vf
+// /___/   /\     Timestamp : 10/20/2012 08:34:08
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan3 -w "C:/Documents and Settings/CARLOS/Desktop/UPA/UPA/UPA.sch" UPA.vf
+//Design Name: UPA
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module UPA(A, 
+           B, 
+           Cin, 
+           clk, 
+           D, 
+           DUPA, 
+           OEUPA, 
+           Q0, 
+           Q7, 
+           UPA, 
+           UPAH, 
+           UPAM, 
+           Y0, 
+           Y1, 
+           C, 
+           FC, 
+           H, 
+           N, 
+           Q0o, 
+           Q7o, 
+           V, 
+           YUPA, 
+           Y0o, 
+           Y7o, 
+           Z);
+
+    input [7:0] A;
+    input [7:0] B;
+    input Cin;
+    input clk;
+    input [7:0] D;
+    input DUPA;
+    input OEUPA;
+    input Q0;
+    input Q7;
+    input [3:0] UPA;
+    input [9:7] UPAH;
+    input [6:4] UPAM;
+    input Y0;
+    input Y1;
+   output C;
+   output FC;
+   output H;
+   output N;
+   output Q0o;
+   output Q7o;
+   output V;
+   output [7:0] YUPA;
+   output Y0o;
+   output Y7o;
+   output Z;
+   
+   wire XLXN_2;
+   wire XLXN_4;
+   wire [7:0] XLXN_9;
+   wire [7:0] XLXN_10;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_27;
+   wire [7:0] XLXN_28;
+   wire [7:0] XLXN_44;
+   
+   UPA_IN XLXI_1 (.A(A[7:0]), 
+                  .B(B[7:0]), 
+                  .D(D[7:0]), 
+                  .Q(XLXN_44[7:0]), 
+                  .UPA(UPA[3:0]), 
+                  .INC(XLXN_2), 
+                  .R(XLXN_10[7:0]), 
+                  .RESET(XLXN_4), 
+                  .S(XLXN_9[7:0]));
+   ALU XLXI_2 (.Cin(Cin), 
+               .R(XLXN_10[7:0]), 
+               .S(XLXN_9[7:0]), 
+               .UPA(UPAM[6:4]), 
+               .C(XLXN_22), 
+               .F(XLXN_28[7:0]), 
+               .H(XLXN_19), 
+               .N(XLXN_23), 
+               .V(XLXN_20), 
+               .Z(XLXN_24));
+   UPA_OUT XLXI_3 (.A(A[7:0]), 
+                   .B(B[7:0]), 
+                   .clk(XLXN_27), 
+                   .F(XLXN_28[7:0]), 
+                   .OEUPA(OEUPA), 
+                   .QOIN(Q0), 
+                   .Q7IN(Q7), 
+                   .UPA(UPAH[9:7]), 
+                   .Y0IN(Y0), 
+                   .Y7IN(Y1), 
+                   .Q(XLXN_44[7:0]), 
+                   .QOOUT(Q0o), 
+                   .Q7OUT(Q7o), 
+                   .YUPA(YUPA[7:0]), 
+                   .Y0OUT(Y0o), 
+                   .Y7OUT(Y7o));
+   CONTADOR XLXI_4 (.CLK(clk), 
+                    .INC(XLXN_2), 
+                    .RESET(XLXN_4), 
+                    .FC(FC));
+   REG_FLAGS XLXI_5 (.C(XLXN_22), 
+                     .clk(XLXN_27), 
+                     .H(XLXN_19), 
+                     .N(XLXN_23), 
+                     .V(XLXN_20), 
+                     .Z(XLXN_24), 
+                     .CO(C), 
+                     .H0(H), 
+                     .NO(N), 
+                     .VO(V), 
+                     .ZO(Z));
+   AND2 XLXI_6 (.I0(clk), 
+                .I1(DUPA), 
+                .O(XLXN_27));
+endmodule

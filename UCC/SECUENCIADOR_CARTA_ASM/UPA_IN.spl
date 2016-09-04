@@ -1,0 +1,12 @@
+[Inputs]
+=UPA[3:0]=
+=A[7:0]=
+=B[7:0]=
+=D[7:0]=
+=Q[7:0]=
+[Outputs]
+INC
+RESET
+=R[7:0]=
+=S[7:0]=
+[BiDir]

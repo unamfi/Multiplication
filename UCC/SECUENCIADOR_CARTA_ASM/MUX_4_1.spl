@@ -1,0 +1,9 @@
+[Inputs]
+I00
+I01
+I10
+I11
+=Prueba[1:0]=
+[Outputs]
+Qsel
+[BiDir]

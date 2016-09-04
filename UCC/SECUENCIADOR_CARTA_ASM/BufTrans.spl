@@ -1,0 +1,8 @@
+[Inputs]
+hab
+nw
+=C[7:0]=
+[Outputs]
+=B[7:0]=
+[BiDir]
+=A[7:0]=

@@ -1,0 +1,178 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2003 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 8.2i
+--  \   \         Application : ISE
+--  /   /         Filename : SIM.ant
+-- /___/   /\     Timestamp : Sat Oct 20 01:03:36 2012
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: SIM
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY SIM IS
+END SIM;
+
+ARCHITECTURE testbench_arch OF SIM IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Documents and Settings\CARLOS\Desktop\ACC\ACC\SIM.ano";
+
+    COMPONENT ACC
+        PORT (
+            A : InOut std_logic_vector (7 DownTo 0);
+            B : InOut std_logic_vector (7 DownTo 0);
+            C : InOut std_logic_vector (7 DownTo 0);
+            NW : In std_logic;
+            E0 : In std_logic;
+            E1 : In std_logic;
+            clk : In std_logic;
+            Z : Out std_logic;
+            N : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL A : std_logic_vector (7 DownTo 0) := "00100000";
+    SIGNAL B : std_logic_vector (7 DownTo 0) := "01010001";
+    SIGNAL C : std_logic_vector (7 DownTo 0) := "10010100";
+    SIGNAL NW : std_logic := '0';
+    SIGNAL E0 : std_logic := '1';
+    SIGNAL E1 : std_logic := '0';
+    SIGNAL clk : std_logic := '0';
+    SIGNAL Z : std_logic := '0';
+    SIGNAL N : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    BEGIN
+        UUT : ACC
+        PORT MAP (
+            A => A,
+            B => B,
+            C => C,
+            NW => NW,
+            E0 => E0,
+            E1 => E1,
+            clk => clk,
+            Z => Z,
+            N => N
+        );
+
+        PROCESS    -- Annotation process
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_Z(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", Z, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, Z);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_N(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", N, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, N);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_Z(0);
+            ANNOTATE_N(0);
+            ANNO_LOOP : LOOP
+                WAIT for 50 ns;
+                TX_TIME := TX_TIME + 50;
+                ANNOTATE_Z(TX_TIME);
+                ANNOTATE_N(TX_TIME);
+                WAIT for 50 ns;
+                TX_TIME := TX_TIME + 50;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  100ns
+                WAIT FOR 100 ns;
+                clk <= '1';
+                A <= "10100000";
+                B <= "11010001";
+                C <= "11010100";
+                -- -------------------------------------
+                -- -------------  Current Time:  200ns
+                WAIT FOR 100 ns;
+                NW <= '1';
+                E0 <= '0';
+                E1 <= '1';
+                clk <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  300ns
+                WAIT FOR 100 ns;
+                clk <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  400ns
+                WAIT FOR 100 ns;
+                clk <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  500ns
+                WAIT FOR 100 ns;
+                clk <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  600ns
+                WAIT FOR 100 ns;
+                clk <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  700ns
+                WAIT FOR 100 ns;
+                clk <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  800ns
+                WAIT FOR 100 ns;
+                clk <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  900ns
+                WAIT FOR 100 ns;
+                clk <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1000ns
+                WAIT FOR 100 ns;
+                NW <= '0';
+                clk <= '0';
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+
